@@ -511,7 +511,7 @@ minetest.register_node("default:clay", {
 	sounds = default.node_sound_dirt_defaults(),
 })
 
-minetest.register_node("default:clay_burned", {
+--[[minetest.register_node("default:clay_burned", {
 	description = "Burned Clay",
 	tiles = {"default_clay_burned.png"},
 	is_ground_content = true,
@@ -519,7 +519,7 @@ minetest.register_node("default:clay_burned", {
 	drop = 'default:clay_lump 4',
 	sounds = default.node_sound_dirt_defaults(),
 })
-
+--]]
 
 minetest.register_node("default:snow", {
 	description = "Snow",

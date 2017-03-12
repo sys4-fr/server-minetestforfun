@@ -209,7 +209,7 @@ function fire.update_sounds_around(pos)
 end
 
 
---[[ Extinguish all flames quickly with water, snow, ice
+-- Extinguish all flames quickly with water, snow, ice
 
 minetest.register_abm({
 	label = "Extinguish flame",
@@ -299,7 +299,7 @@ else -- Fire enabled
 end
 
 
--- Rarely ignite things from far
+--[[ Rarely ignite things from far
 
 -- Currently disabled to reduce the chance of uncontrollable spreading
 	fires that disrupt servers. Also for less lua processing load.

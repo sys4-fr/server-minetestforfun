@@ -37,3 +37,51 @@
 [submodule "mods/mapfix"]
 	path = mods/mapfix
 	url = https://github.com/minetest-mods/mapfix.git
+[submodule "mods/technic"]
+	path = mods/technic
+	url = https://github.com/minetest-technic/technic.git
+[submodule "mods/digilines"]
+	path = mods/digilines
+	url = https://github.com/minetest-mods/digilines.git
+[submodule "mods/maidroid"]
+	path = mods/maidroid
+	url = https://github.com/tacigar/maidroid.git
+[submodule "mods/pdisc"]
+	path = mods/pdisc
+	url = https://github.com/HybridDog/pdisc.git
+[submodule "mods/enchanting"]
+	path = mods/enchanting
+	url = https://github.com/minetest-mods/enchanting.git
+[submodule "mods/bonemeal"]
+	path = mods/bonemeal
+	url = https://github.com/tenplus1/bonemeal.git
+[submodule "mods/meshnode"]
+	path = mods/meshnode
+	url = https://github.com/stujones11/meshnode.git
+[submodule "mods/playeranim"]
+	path = mods/playeranim
+	url = https://github.com/minetest-mods/playeranim.git
+[submodule "mods/playereffects"]
+	path = mods/playereffects
+	url = git://repo.or.cz/minetest_playereffects.git
+[submodule "mods/witchcraft"]
+	path = mods/witchcraft
+	url = https://github.com/D00Med/witchcraft.git
+[submodule "mods/moreplants"]
+	path = mods/moreplants
+	url = https://github.com/D00Med/moreplants.git
+[submodule "mods/moreflowers"]
+	path = mods/moreflowers
+	url = https://github.com/sys4-fr/moreflowers.git
+[submodule "mods/morefarming"]
+	path = mods/morefarming
+	url = https://github.com/sys4-fr/morefarming.git
+[submodule "mods/bakedclay"]
+	path = mods/bakedclay
+	url = https://github.com/tenplus1/bakedclay.git
+[submodule "mods/lightning"]
+	path = mods/lightning
+	url = https://github.com/minetest-mods/lightning.git
+[submodule "mods/weather_pack"]
+	path = mods/weather_pack
+	url = https://github.com/xeranas/weather_pack.git
