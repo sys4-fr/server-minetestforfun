@@ -85,3 +85,6 @@
 [submodule "mods/weather_pack"]
 	path = mods/weather_pack
 	url = https://github.com/xeranas/weather_pack.git
+[submodule "mods/unifieddyes"]
+	path = mods/unifieddyes
+	url = https://github.com/minetest-mods/unifieddyes.git
