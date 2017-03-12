@@ -259,3 +259,6 @@ load_mod_bakedclay = true
 
 load_mod_moreflowers = true
 load_mod_morefarming = true
+
+load_mod_moreplants = true
+load_mod_nalc = true
