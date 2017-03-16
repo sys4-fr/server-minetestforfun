@@ -154,7 +154,21 @@ function add_protected_bukket_liquid(nameofbukket,liquidsourcename)
 				return itemstack
 			end
 
-			if minetest.registered_nodes[n.name].buildable_to then
+			local ndef
+			if n then
+				ndef = minetest.registered_nodes[n.name]
+			end
+
+			-- Call on_rightclick if the pointed node defines it
+			if ndef and ndef.on_rightclick and
+				user and not user:get_player_control().sneak
+			then
+				return ndef.on_rightclick(
+					pointed_thing.under,
+					n, user, itemstack) or itemstack
+			end
+
+			if ndef and ndef.buildable_to then
 				-- buildable; replace the node
 				minetest.log("action", user:get_player_name().. " use "..nameofbukket.." at  ".. minetest.pos_to_string(pointed_thing.under))
 				minetest.add_node(pointed_thing.under, {name=liquidsourcename})
