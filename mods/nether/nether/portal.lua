@@ -557,27 +557,38 @@ minetest.override_item("default:obsidian", {
 })
 
 -- override mese crystal fragment for making an obsidian portal
-minetest.after(0.1, function()
-	minetest.override_item("default:mese_crystal_fragment", {
-		on_place = function(stack, player, pt)
-			if pt.under
-			and minetest.get_node(pt.under).name == "default:obsidian" then
-				--print("[nether] tries to enable a portal")
-				local done = make_portal(pt.under)
-				if done then
-					minetest.chat_send_player(
-						player:get_player_name(),
-						"Warning: If you are in the nether you may not be able to find the way out!"
-					)
-					if not minetest.setting_getbool("creative_mode") then
-						stack:take_item()
+minetest.after(
+	0.1,
+	function()
+		minetest.override_item(
+			"default:mese_crystal_fragment",
+			{
+				on_place = function(stack, player, pt)
+					local n = minetest.get_node(pt.under)
+					if n
+					and n.name == "default:obsidian" then
+						--print("[nether] tries to enable a portal")
+						local done = make_portal(pt.under)
+						if done then
+							minetest.chat_send_player(
+								player:get_player_name(),
+								"Warning: If you are in the nether you may not be able to find the way out!"
+							)
+							if not minetest.setting_getbool("creative_mode") then
+								stack:take_item()
+							end
+						end
+					elseif n then
+						local ndef = minetest.registered_nodes[n.name]
+						if ndef and ndef.on_rightclick and
+						player and not player:get_player_control().sneak then
+							return ndef.on_rightclick(pt.under, n, player, stack) or stack
+						end
 					end
+					return stack
 				end
-			end
-			return stack
-		end
-	})
-end)
+			})
+	end)
 
 
 -- a not filled square
