@@ -62,7 +62,7 @@ if minetest.get_modpath("witchcraft") then
 			})
 
 		-- Rewrite potion table which is buggy
-		witchcraft.pot_new =
+		local pot_new =
 			{
 				{"blue", "blue2", "default:leaves", "brown", "default:dirt", "red", "purple"}, -- replace waterlily by leaves (flowers_plus incompatibility i think...)
 				{"blue2", "green", "default:papyrus", "", "", "gred", "magenta"},
@@ -87,6 +87,48 @@ if minetest.get_modpath("witchcraft") then
 				{"silver", "grey", "witchcraft:bone", "", "", "", ""},
 				{"grey", "aqua", "default:diamond", "", "", "", ""},
 			}
+
+		-- Override pots on_rightclick
+		for _, row in ipairs(pot_new) do
+			local color = row[1]
+			local newcolor = row[2]
+			local newcolor2 = row[4]
+			local ingredient = row[3]
+			local ingredient2 = row[5]
+			local combine = row[6]
+			local cresult = row[7]
+
+			minetest.override_item(
+				"witchcraft:pot_"..color,
+				{
+					on_rightclick = function(pos, node, clicker, item, _)
+						local wield_item = clicker:get_wielded_item():get_name()
+						if wield_item == "vessels:glass_bottle" and clicker:get_wielded_item():get_count() == 3 then
+							item:replace("witchcraft:potion_"..color)
+							minetest.env:add_item({x=pos.x, y=pos.y+1.5, z=pos.z}, "witchcraft:potion_"..color)
+							minetest.env:add_item({x=pos.x, y=pos.y+1.5, z=pos.z}, "witchcraft:potion_"..color)
+							minetest.set_node(pos, {name="witchcraft:pot", param2=node.param2})
+						elseif wield_item == "vessels:glass_bottle" and clicker:get_wielded_item():get_count() ~= 3 then
+							item:replace("witchcraft:potion_"..color)
+							minetest.set_node(pos, {name="witchcraft:pot", param2=node.param2})
+						else
+							if wield_item == ingredient then
+								minetest.set_node(pos, {name="witchcraft:pot_"..newcolor, param2=node.param2})
+								item:take_item()
+							elseif wield_item == ingredient2 then
+								minetest.set_node(pos, {name="witchcraft:pot_"..newcolor2, param2=node.param2})
+								item:take_item()
+							elseif wield_item == "bucket:bucket_water" then
+								minetest.set_node(pos, {name="witchcraft:pot_blue", param2=node.param2})
+								item:replace("bucket:bucket_empty")
+							elseif wield_item == "witchcraft:potion_"..combine then
+								minetest.set_node(pos, {name="witchcraft:pot_"..cresult, param2=node.param2})
+								item:replace("vessels:glass_bottle")
+							end
+						end
+					end
+				})
+		end
 
 		-- Override potion green effect if farming_redo is loaded (bad call in original mod)
 		if farming.mod and farming.mod == "redo" then
