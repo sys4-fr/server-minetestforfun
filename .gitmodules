@@ -67,12 +67,6 @@
 [submodule "mods/witchcraft"]
 	path = mods/witchcraft
 	url = https://github.com/D00Med/witchcraft.git
-[submodule "mods/moreplants"]
-	path = mods/moreplants
-	url = https://github.com/D00Med/moreplants.git
-[submodule "mods/moreflowers"]
-	path = mods/moreflowers
-	url = https://github.com/sys4-fr/moreflowers.git
 [submodule "mods/morefarming"]
 	path = mods/morefarming
 	url = https://github.com/sys4-fr/morefarming.git
@@ -88,3 +82,11 @@
 [submodule "mods/unifieddyes"]
 	path = mods/unifieddyes
 	url = https://github.com/minetest-mods/unifieddyes.git
+[submodule "mods/moreplants"]
+	path = mods/moreplants
+	url = https://github.com/sys4-fr/moreplants.git
+	branch = master
+[submodule "mods/moreflowers"]
+	path = mods/moreflowers
+	url = https://github.com/sys4-fr/moreflowers.git
+	branch = master
