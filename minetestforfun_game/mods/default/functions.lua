@@ -487,3 +487,27 @@ function default.intersects_protection(minp, maxp, player_name, interval)
 
 	return false
 end
+
+--
+-- NOTICE: This method is not an official part of the API yet!
+-- This method may change in future.
+--
+
+function default.can_interact_with_node(player, pos)
+	if player then
+		if minetest.check_player_privs(player, "protection_bypass") then
+			return true
+		end
+	else
+		return false
+	end
+
+	local meta = minetest.get_meta(pos)
+	local owner = meta:get_string("owner")
+
+	if not owner or owner == "" or owner == player:get_player_name() then
+		return true
+	end
+
+	return false
+end
