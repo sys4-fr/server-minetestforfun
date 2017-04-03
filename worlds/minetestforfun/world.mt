@@ -262,3 +262,5 @@ load_mod_morefarming = true
 
 load_mod_moreplants = true
 load_mod_nalc = true
+
+load_mod_cotton = true
