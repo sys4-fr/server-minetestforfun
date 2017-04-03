@@ -79,9 +79,6 @@
 [submodule "mods/weather_pack"]
 	path = mods/weather_pack
 	url = https://github.com/xeranas/weather_pack.git
-[submodule "mods/unifieddyes"]
-	path = mods/unifieddyes
-	url = https://github.com/minetest-mods/unifieddyes.git
 [submodule "mods/moreplants"]
 	path = mods/moreplants
 	url = https://github.com/sys4-fr/moreplants.git
@@ -90,3 +87,6 @@
 	path = mods/moreflowers
 	url = https://github.com/sys4-fr/moreflowers.git
 	branch = master
+[submodule "mods/unifieddyes"]
+	path = mods/unifieddyes
+	url = https://github.com/minetest-mods/unifieddyes.git
