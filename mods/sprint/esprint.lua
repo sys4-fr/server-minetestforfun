@@ -208,9 +208,13 @@ function setSprinting(playerName, sprinting) --Sets the state of a player (0=sto
 	if sprint.players[playerName] then
 		sprint.players[playerName]["sprinting"] = sprinting
 		if sprinting == true then
-			player:set_physics_override({speed=SPRINT_SPEED + bonus_speed,jump=SPRINT_JUMP + bonus_jump})
+	--		player:set_physics_override({speed=SPRINT_SPEED + bonus_speed,jump=SPRINT_JUMP + bonus_jump})
+			player_physics.add(player, "speed", "sprint_speed", 0.35+ bonus_speed)
+			player_physics.add(player, "jump", "sprint_jump", 0.1+ bonus_jump)
 		elseif sprinting == false then
-			player:set_physics_override({speed=1.0 + bonus_speed,jump=1.0 + bonus_jump})
+	--		player:set_physics_override({speed=1.0 + bonus_speed,jump=1.0 + bonus_jump})
+			player_physics.add(player, "speed", "sprint_speed", bonus_speed)
+			player_physics.add(player, "jump", "sprint_jump", bonus_jump)
 		end
 		return true
 	end

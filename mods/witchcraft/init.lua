@@ -73,7 +73,7 @@ minetest.register_node("witchcraft:shelf", {
 		local stack = inv:get_stack(from_list, from_index)
 		local to_stack = inv:get_stack(to_list, to_index)
 		if to_list == "vessels" then
-			if minetest.get_item_group(stack:get_name(), "potion") ~= 0 
+			if minetest.get_item_group(stack:get_name(), "potion") ~= 0
 					and to_stack:is_empty() then
 				return 1
 			else
@@ -914,12 +914,12 @@ minetest.register_entity("witchcraft:tnt_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:tnt_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -938,7 +938,7 @@ minetest.register_entity("witchcraft:tnt_splash", {
 								local p = {x=pos.x+dx, y=pos.y, z=pos.z+dz}
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
-								if n ~= "witchcraft:tnt_splash" and n ~="default:obsidian" and n ~= "air" then	
+								if n ~= "witchcraft:tnt_splash" and n ~="default:obsidian" and n ~= "air" then
 									local pos = self.object:getpos()
 									minetest.sound_play("default_break_glass.1", {
 									pos = self.object:getpos(),
@@ -973,7 +973,7 @@ minetest.register_entity("witchcraft:tnt_splash", {
 			end
 		end
 		end
-		
+
 	end,
 })
 
@@ -984,12 +984,12 @@ minetest.register_entity("witchcraft:fire_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:fire_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1043,7 +1043,7 @@ minetest.register_entity("witchcraft:fire_splash", {
 			end
 		end
 		end
-		
+
 	end,
 })
 
@@ -1052,12 +1052,12 @@ minetest.register_entity("witchcraft:death_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:death_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1089,8 +1089,6 @@ minetest.register_entity("witchcraft:death_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1099,12 +1097,12 @@ minetest.register_entity("witchcraft:heal_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:heal_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1136,8 +1134,6 @@ minetest.register_entity("witchcraft:heal_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1146,12 +1142,12 @@ minetest.register_entity("witchcraft:slow_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:slow_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1168,7 +1164,6 @@ minetest.register_entity("witchcraft:slow_splash", {
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
 								if n ~= "witchcraft:slow_splash" and n ~= "air" then
-									
 										self.object:remove()
 								elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
 									minetest.sound_play("default_break_glass.1", {
@@ -1182,8 +1177,6 @@ minetest.register_entity("witchcraft:slow_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1192,18 +1185,34 @@ minetest.register_entity("witchcraft:fast_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(5, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
+				if obj:is_player() then
+					playereffects.apply_effect_type("potion_slow_lv1", 11, obj)
+					minetest.sound_play("default_break_glass", {
+						pos = self.object:getpos(),
+						max_hear_distance = 20,
+						gain = 10.0,
+					})
+					self.object:remove()
+					return
+				end
 				if obj:get_luaentity() ~= nil then
-					if obj:get_luaentity().name ~= "witchcraft:fast_splash" and obj:get_luaentity().name ~= "__builtin:item" then
+					if obj:get_luaentity().name ~= "witchcraft:fast_splash" and obj:get_luaentity().name ~= "__builtin:item" and obj:get_luaentity().name ~= "gauges:hp_bar" then
 						local vel = obj:getvelocity()
 						obj:setvelocity({x=vel.x*4, y=vel.y*1, z=vel.z*4})
-					self.object:remove()
+						minetest.sound_play("default_break_glass", {
+							pos = self.object:getpos(),
+							max_hear_distance = 20,
+							gain = 10.0,
+						})
+						self.object:remove()
+						return
 					end
 				end
 			end
@@ -1214,8 +1223,7 @@ minetest.register_entity("witchcraft:fast_splash", {
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
 								if n ~= "witchcraft:fast_splash" and n ~= "air" then
-									
-										self.object:remove()
+									self.object:remove()
 								elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
 									minetest.sound_play("default_break_glass.1", {
 									pos = self.object:getpos(),
@@ -1228,8 +1236,6 @@ minetest.register_entity("witchcraft:fast_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1238,12 +1244,12 @@ minetest.register_entity("witchcraft:antigrav_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:antigrav_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1259,11 +1265,8 @@ minetest.register_entity("witchcraft:antigrav_splash", {
 								local p = {x=pos.x+dx, y=pos.y, z=pos.z+dz}
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
-								if n ~= "witchcraft:antigrav_splash" and n ~= "air" then
-									
-										self.object:remove()
-								elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
-									minetest.sound_play("default_break_glass.1", {
+								if n ~= "air" then
+									minetest.sound_play("default_break_glass", {
 									pos = self.object:getpos(),
 									max_hear_distance = 20,
 									gain = 10.0,
@@ -1274,8 +1277,6 @@ minetest.register_entity("witchcraft:antigrav_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1284,12 +1285,12 @@ minetest.register_entity("witchcraft:jump_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:jump_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1305,11 +1306,8 @@ minetest.register_entity("witchcraft:jump_splash", {
 								local p = {x=pos.x+dx, y=pos.y, z=pos.z+dz}
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
-								if n ~= "witchcraft:jump_splash" and n ~= "air" then
-									
-										self.object:remove()
-								elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
-									minetest.sound_play("default_break_glass.1", {
+								if n ~= "air" then
+									minetest.sound_play("default_break_glass", {
 									pos = self.object:getpos(),
 									max_hear_distance = 20,
 									gain = 10.0,
@@ -1320,8 +1318,6 @@ minetest.register_entity("witchcraft:jump_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1330,12 +1326,12 @@ minetest.register_entity("witchcraft:murky_splash", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:murky_splash" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -1367,8 +1363,6 @@ minetest.register_entity("witchcraft:murky_splash", {
 							end
 						end
 					end
-   
-		
 	end,
 })
 
@@ -1378,8 +1372,8 @@ minetest.register_entity("witchcraft:shadow_splash", {
 	damage = 2,
 	physical = true,
 	collisionbox = {-0.1, -0.1, -0.1, 0.1, 0.1, 0.1},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(5, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(5, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
@@ -1408,8 +1402,8 @@ minetest.register_entity("witchcraft:smoke_splash", {
 	damage = 2,
 	physical = true,
 	collisionbox = {-0.1, -0.1, -0.1, 0.1, 0.1, 0.1},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(10, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(10, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
@@ -1431,101 +1425,121 @@ minetest.register_entity("witchcraft:smoke_splash", {
 			false, --collisiondetection
 			"witchcraft_smoke.png" --texture
 		)
-		
+
 	end,
 })
 
 --player effects
 
-playereffects.register_effect_type("potion_speed_lv1", "High speed", nil, {"speed"}, 
+playereffects.register_effect_type("potion_speed_lv1", "High speed", nil, {"speed"},
 	function(player)
-		player:set_physics_override(2,nil,nil)
+		--player:set_physics_override(2,nil,nil)
+		player_physics.add(player, "speed", "potion_speed_lv1", 1)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,nil)
+		--player:set_physics_override(1,nil,nil)
+		player_physics.remove(player, "speed", "potion_speed_lv1")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_speed_lv2", "High speed", nil, {"speed"}, 
+playereffects.register_effect_type("potion_speed_lv2", "High speed", nil, {"speed"},
 	function(player)
-		player:set_physics_override(2.5,nil,nil)
+		--player:set_physics_override(2.5,nil,nil)
+		player_physics.add(player, "speed", "potion_speed_lv2", 1.5)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,nil)
+		--player:set_physics_override(1,nil,nil)
+		player_physics.remove(player, "speed", "potion_speed_lv2")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_jump_lvx", "High Jump", nil, {"jump"}, 
+playereffects.register_effect_type("potion_jump_lvx", "High Jump", nil, {"jump"},
 	function(player)
-		player:set_physics_override(nil,1.5,0.8)
+		--player:set_physics_override(nil,1.5,0.8)
+		player_physics.add(player, "jump", "potion_jump_lvx", 0.5)
+		player_physics.add(player, "gravity", "potion_jump_lvx", -0.2)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(nil,1,1)
+		--player:set_physics_override(nil,1,1)
+		player_physics.remove(player, "jump", "potion_jump_lvx")
+		player_physics.remove(player, "gravity", "potion_jump_lvx")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_antigrav_lvx", "Light weight", nil, {"gravity"}, 
+playereffects.register_effect_type("potion_antigrav_lvx", "Light weight", nil, {"gravity"},
 	function(player)
-		player:set_physics_override(nil,nil,0.1)
+		--player:set_physics_override(nil,nil,0.1)
+		player_physics.add(player, "gravity", "potion_antigrav_lvx", -0.9)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(nil,nil,1)
+		--player:set_physics_override(nil,nil,1)
+		player_physics.remove(player, "gravity", "potion_antigrav_lvx")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_slow_lv1", "Low speed", nil, {"speed"}, 
+playereffects.register_effect_type("potion_slow_lv1", "Low speed", nil, {"speed"},
 	function(player)
-		player:set_physics_override(0.5,nil,nil)
+		--player:set_physics_override(0.5,nil,nil)
+		player_physics.add(player, "speed", "potion_slow_lv1", -0.5)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,nil)
+		--player:set_physics_override(1,nil,nil)
+		player_physics.remove(player, "speed", "potion_slow_lv1")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_slow_lv2", "Low speed", nil, {"speed"}, 
+playereffects.register_effect_type("potion_slow_lv2", "Low speed", nil, {"speed"},
 	function(player)
-		player:set_physics_override(0.4,nil,nil)
+		--player:set_physics_override(0.4,nil,nil)
+		player_physics.add(player, "speed", "potion_slow_lv2", -0.6)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,nil)
+		--player:set_physics_override(1,nil,nil)
+		player_physics.remove(player, "speed", "potion_slow_lv2")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_swim_lv1", "Fast Swim", nil, {"swim"}, 
+playereffects.register_effect_type("potion_swim_lv1", "Fast Swim", nil, {"swim"},
 	function(player)
-		player:set_physics_override(3,nil,nil)
+		--player:set_physics_override(3,nil,nil)
+		player_physics.add(player, "speed", "potion_swim_lv1", 2)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,nil)
+		--player:set_physics_override(1,nil,nil)
+		player_physics.remove(player, "speed", "potion_swim_lv1")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_swim_lv2", "Dive", nil, {"swim"}, 
+playereffects.register_effect_type("potion_swim_lv2", "Dive", nil, {"swim"},
 	function(player)
-		player:set_physics_override(3,nil,4)
+		--player:set_physics_override(3,nil,4)
+		player_physics.add(player,  "speed", "potion_swim_lv2", 2)
+		player_physics.add(player,  "gravity", "potion_swim_lv2", 3)
 	end,
-	
+
 	function(effect, player)
-		player:set_physics_override(1,nil,1)
+		--player:set_physics_override(1,nil,1)
+		player_physics.remove(player, "speed", "potion_swim_lv2")
+		player_physics.remove(player, "gravity", "potion_swim_lv2")
 	end,
 	false
 )
 
-playereffects.register_effect_type("potion_silver", "Fire resist", nil, {"fire_resist"}, 
+playereffects.register_effect_type("potion_silver", "Fire resist", nil, {"fire_resist"},
 	function(player)
 		local pos = player:getpos()
 		local node = minetest.get_node(pos).name
@@ -1996,7 +2010,7 @@ minetest.register_node("witchcraft:potion_darkpurple", {
 			false, --collisiondetection
 			"witchcraft_effect.png" --texture
 		)
-		
+
 		-- take item
 		if not minetest.setting_getbool("creative_mode") then
 
@@ -2083,7 +2097,7 @@ minetest.register_node("witchcraft:potion_darkpurple_2", {
 			false, --collisiondetection
 			"witchcraft_effect.png" --texture
 		)
-		
+
 		-- take item
 		if not minetest.setting_getbool("creative_mode") then
 
@@ -2187,12 +2201,12 @@ minetest.register_entity("witchcraft:fire", {
 	velocity = 0.1,
 	damage = 2,
 	collisionbox = {0, 0, 0, 0, 0, 0},
-	on_step = function(self, obj, pos)		
-		local remove = minetest.after(2, function() 
+	on_step = function(self, obj, pos)
+		local remove = minetest.after(2, function()
 		self.object:remove()
 		end)
 		local pos = self.object:getpos()
-		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)	
+		local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
 			for k, obj in pairs(objs) do
 				if obj:get_luaentity() ~= nil then
 					if obj:get_luaentity().name ~= "witchcraft:fire" and obj:get_luaentity().name ~= "__builtin:item" then
@@ -2210,7 +2224,7 @@ minetest.register_entity("witchcraft:fire", {
 								local p = {x=pos.x+dx, y=pos.y, z=pos.z+dz}
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
-								if n ~= "witchcraft:fire" and n ~= "air" and n ~="default:dirt_with_grass" and n ~="default:dirt_with_dry_grass" and n ~="default:stone"  then	
+								if n ~= "witchcraft:fire" and n ~= "air" and n ~="default:dirt_with_grass" and n ~="default:dirt_with_dry_grass" and n ~="default:stone" then
 									minetest.env:set_node(t, {name="fire:basic_flame"})
 								elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
 									self.object:remove()
@@ -2255,7 +2269,7 @@ minetest.register_entity("witchcraft:fire", {
 			false, --collisiondetection
 			"witchcraft_flame.png" --texture
 		)
-		
+
 	end,
 })
 
@@ -2298,7 +2312,7 @@ minetest.register_node("witchcraft:potion_orange", {
 			false, --collisiondetection
 			"witchcraft_flame.png" --texture
 		)
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end,
@@ -2342,7 +2356,7 @@ minetest.register_node("witchcraft:potion_orange_2", {
 			false, --collisiondetection
 			"witchcraft_flame.png^[colorize:blue:200" --texture
 		)
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end,
@@ -2442,7 +2456,7 @@ minetest.register_node("witchcraft:potion_purple", {
 			false, --collisiondetection
 			"witchcraft_smoke.png^[colorize:magenta:50" --texture
 		)
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end,
@@ -2522,7 +2536,7 @@ else
 	itemstack:replace("vessels:glass_bottle")
 	return itemstack
 	end,
-	
+
 	minetest.register_node("witchcraft:potion_gred", {
 	description = "Hunger Potion (better with hunger mod)",
 	drawtype = "plantlike",
@@ -2585,7 +2599,7 @@ minetest.register_node("witchcraft:potion_purple_2", {
 			false, --collisiondetection
 			"witchcraft_smoke.png^[colorize:magenta:50" --texture
 		)
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end,
@@ -2943,7 +2957,7 @@ minetest.register_node("witchcraft:potion_aqua", {
 	minetest.env:add_entity(pos, "experience:orb")
 	minetest.env:add_entity(pos, "experience:orb")
 	minetest.env:add_entity(pos, "experience:orb")
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end
@@ -2989,7 +3003,7 @@ minetest.register_node("witchcraft:potion_aqua", {
 		minetest.add_item(pos, "default:gold_lump")
 		minetest.add_item(pos, "farming:bread")
 		minetest.add_item(pos, "default:copper_ingot")
-	
+
 		item:replace("vessels:glass_bottle")
 		return item
 	end
@@ -3705,7 +3719,7 @@ minetest.register_node("witchcraft:pentagram", {
 	use_texture_alpha = true,
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	sunlight_propagates = false,	
+	sunlight_propagates = false,
 	light_source = 50,
 	walkable = false,
 	is_ground_content = true,
@@ -3748,7 +3762,7 @@ minetest.register_node("witchcraft:portal", {
 	use_texture_alpha = true,
 	paramtype = "light",
 	paramtype2 = "wallmounted",
-	sunlight_propagates = false,	
+	sunlight_propagates = false,
 	light_source = 50,
 	walkable = false,
 	is_ground_content = true,
