@@ -2,6 +2,7 @@ default
 vessels
 tnt
 fire
+player_physics
 playereffects
 farming?
 lightning?
