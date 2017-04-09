@@ -84,6 +84,3 @@
 	path = mods/moreflowers
 	url = https://github.com/sys4-fr/moreflowers.git
 	branch = master
-[submodule "mods/unifieddyes"]
-	path = mods/unifieddyes
-	url = https://github.com/minetest-mods/unifieddyes.git
