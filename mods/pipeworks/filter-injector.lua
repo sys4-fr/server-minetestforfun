@@ -144,6 +144,14 @@ local function punch_filter(data, filtpos, filtnode, msg)
 	local dir = minetest.facedir_to_right_dir(filtnode.param2)
 	local frompos = vector.subtract(filtpos, dir)
 	local fromnode = minetest.get_node(frompos)
+
+	-- Fix crash with connected_chests (sys4 fix for MFF)
+	if fromnode and fromnode.name == "connected_chests:chest_right" then
+		local v_mul = vector.multiply(dir, 2)
+		frompos = vector.subtract(filtpos, v_mul)
+		fromnode = minetest.get_node(frompos)
+	end
+	
 	if not fromnode then return end
 	local fromdef = minetest.registered_nodes[fromnode.name]
 	if not fromdef then return end
@@ -209,7 +217,7 @@ local function punch_filter(data, filtpos, filtnode, msg)
 			if type(msg.name) == "string" then
 				table.insert(filters, {name = msg.name, count = tonumber(msg.count) or 1})
 			else
-				for _, filter in ipairs(msg) do
+				for _, filter in ipairs(msg.name) do
 					local t_filter = type(filter)
 					if t_filter == "table" then
 						if type(filter.name) == "string" then
