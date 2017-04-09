@@ -1110,7 +1110,7 @@ minetest.register_entity("witchcraft:death_splash", {
 											 end
 										 end
 									 end,
-																	 })
+})
 
 minetest.register_entity("witchcraft:heal_splash", {
 									 textures = {"witchcraft_splash_red.png"},
@@ -1161,8 +1161,6 @@ minetest.register_entity("witchcraft:heal_splash", {
 													 local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 													 local n = minetest.env:get_node(p).name
 													 if n ~= "witchcraft:heal_splash" and n ~= "air" then
-														 self.object:remove()
-													 elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
 														 minetest.sound_play("default_break_glass", {
 																						pos = self.object:getpos(),
 																						max_hear_distance = 20,
@@ -1452,8 +1450,6 @@ minetest.register_entity("witchcraft:murky_splash", {
 													 local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 													 local n = minetest.env:get_node(p).name
 													 if n ~= "witchcraft:murky_splash" and n ~= "air" then
-														 self.object:remove()
-													 elseif n =="default:dirt_with_grass" or n =="default:dirt_with_dry_grass" then
 														 minetest.sound_play("default_break_glass", {
 																						pos = self.object:getpos(),
 																						max_hear_distance = 20,
@@ -1536,12 +1532,12 @@ minetest.register_entity("witchcraft:smoke_splash", {
 playereffects.register_effect_type("potion_speed_lv1", "High speed", nil, {"speed"},
 											  function(player)
 												  --player:set_physics_override(2,nil,nil)
-												  player_physics.add(player, "speed", "potion_speed_lv1", 1)
+												  player_physics.set_stats(player, "potion_speed_lv1", {speed=1})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(1,nil,nil)
-												  player_physics.remove(player, "speed", "potion_speed_lv1")
+												  player_physics.remove(player, "potion_speed_lv1")
 											  end,
 											  false
 )
@@ -1549,12 +1545,12 @@ playereffects.register_effect_type("potion_speed_lv1", "High speed", nil, {"spee
 playereffects.register_effect_type("potion_speed_lv2", "High speed", nil, {"speed"},
 											  function(player)
 												  --player:set_physics_override(2.5,nil,nil)
-												  player_physics.add(player, "speed", "potion_speed_lv2", 1.5)
+												  player_physics.set_stats(player, "potion_speed_lv2", {speed=1.5})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(1,nil,nil)
-												  player_physics.remove(player, "speed", "potion_speed_lv2")
+												  player_physics.remove(player, "potion_speed_lv2")
 											  end,
 											  false
 )
@@ -1562,14 +1558,12 @@ playereffects.register_effect_type("potion_speed_lv2", "High speed", nil, {"spee
 playereffects.register_effect_type("potion_jump_lvx", "High Jump", nil, {"jump"},
 											  function(player)
 												  --player:set_physics_override(nil,1.5,0.8)
-												  player_physics.add(player, "jump", "potion_jump_lvx", 0.5)
-												  player_physics.add(player, "gravity", "potion_jump_lvx", -0.2)
+												  player_physics.set_stats(player, "potion_jump_lvx", {jump=0.5, gravity=-0.2})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(nil,1,1)
-												  player_physics.remove(player, "jump", "potion_jump_lvx")
-												  player_physics.remove(player, "gravity", "potion_jump_lvx")
+												  player_physics.remove(player, "potion_jump_lvx")
 											  end,
 											  false
 )
@@ -1577,12 +1571,12 @@ playereffects.register_effect_type("potion_jump_lvx", "High Jump", nil, {"jump"}
 playereffects.register_effect_type("potion_antigrav_lvx", "Light weight", nil, {"gravity"},
 											  function(player)
 												  --player:set_physics_override(nil,nil,0.1)
-												  player_physics.add(player, "gravity", "potion_antigrav_lvx", -0.9)
+												  player_physics.set_stats(player, "potion_antigrav_lvx", {gravity=-0.9})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(nil,nil,1)
-												  player_physics.remove(player, "gravity", "potion_antigrav_lvx")
+												  player_physics.remove(player, "potion_antigrav_lvx")
 											  end,
 											  false
 )
@@ -1590,12 +1584,12 @@ playereffects.register_effect_type("potion_antigrav_lvx", "Light weight", nil, {
 playereffects.register_effect_type("potion_slow_lv1", "Low speed", nil, {"speed"},
 											  function(player)
 												  --player:set_physics_override(0.5,nil,nil)
-												  player_physics.add(player, "speed", "potion_slow_lv1", -0.5)
+												  player_physics.set_stats(player, "potion_slow_lv1", {speed=-0.5})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(1,nil,nil)
-												  player_physics.remove(player, "speed", "potion_slow_lv1")
+												  player_physics.remove(player, "potion_slow_lv1")
 											  end,
 											  false
 )
@@ -1603,12 +1597,12 @@ playereffects.register_effect_type("potion_slow_lv1", "Low speed", nil, {"speed"
 playereffects.register_effect_type("potion_slow_lv2", "Low speed", nil, {"speed"},
 											  function(player)
 												  --player:set_physics_override(0.4,nil,nil)
-												  player_physics.add(player, "speed", "potion_slow_lv2", -0.6)
+												  player_physics.set_stats(player, "potion_slow_lv2", {speed=-0.6})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(1,nil,nil)
-												  player_physics.remove(player, "speed", "potion_slow_lv2")
+												  player_physics.remove(player, "potion_slow_lv2")
 											  end,
 											  false
 )
@@ -1616,12 +1610,12 @@ playereffects.register_effect_type("potion_slow_lv2", "Low speed", nil, {"speed"
 playereffects.register_effect_type("potion_swim_lv1", "Fast Swim", nil, {"swim"},
 											  function(player)
 												  --player:set_physics_override(3,nil,nil)
-												  player_physics.add(player, "speed", "potion_swim_lv1", 2)
+												  player_physics.set_stats(player, "potion_swim_lv1", {speed=2})
 											  end,
 
 											  function(effect, player)
 												  --player:set_physics_override(1,nil,nil)
-												  player_physics.remove(player, "speed", "potion_swim_lv1")
+												  player_physics.remove(player, "potion_swim_lv1")
 											  end,
 											  false
 )
@@ -1629,8 +1623,7 @@ playereffects.register_effect_type("potion_swim_lv1", "Fast Swim", nil, {"swim"}
 playereffects.register_effect_type("potion_swim_lv2", "Dive", nil, {"swim"},
 											  function(player)
 												  --player:set_physics_override(3,nil,4)
-												  player_physics.add(player,  "speed", "potion_swim_lv2", 2)
-												  player_physics.add(player,  "gravity", "potion_swim_lv2", 3)
+												  player_physics.set_stats(player, "potion_swim_lv2", {speed=2, gravity=3})
 											  end,
 
 											  function(effect, player)
