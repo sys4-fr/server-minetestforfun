@@ -217,7 +217,7 @@ local function punch_filter(data, filtpos, filtnode, msg)
 			if type(msg.name) == "string" then
 				table.insert(filters, {name = msg.name, count = tonumber(msg.count) or 1})
 			else
-				for _, filter in ipairs(msg) do
+				for _, filter in ipairs(msg.name) do
 					local t_filter = type(filter)
 					if t_filter == "table" then
 						if type(filter.name) == "string" then
