@@ -1110,7 +1110,7 @@ minetest.register_entity("witchcraft:death_splash", {
 											 end
 										 end
 									 end,
-})
+																	})
 
 minetest.register_entity("witchcraft:heal_splash", {
 									 textures = {"witchcraft_splash_red.png"},
