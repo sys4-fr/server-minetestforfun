@@ -238,5 +238,5 @@ if minetest.get_modpath("technic") then
 	register_dust("Tin", "default:tin_ingot")
 
 	-- Add superquarry machine
-	dofile(get_modpath(minetest.get_current_modname()).."/technic/superquarry.lua")
+	dofile(minetest.get_modpath(minetest.get_current_modname()).."/technic/superquarry.lua")
 end
