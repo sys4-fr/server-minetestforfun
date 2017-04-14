@@ -9,7 +9,7 @@ minetest.register_craft({
 		{"default:mithrilblock",       "pipeworks:filter",       "default:mithrilblock"},
 		{"technic:motor",              "technic:quarry", "technic:diamond_drill_head"},
 		{"technic:quarry", "technic:hv_cable",       "technic:quarry"}},
-	output = "technic:superquarry",
+	output = "nalc:superquarry",
 })
 
 local superquarry_dig_above_nodes = 3 -- How far above the superquarry we will dig nodes
@@ -21,7 +21,7 @@ local function set_superquarry_formspec(meta)
 	local radius = meta:get_int("size")
 	local formspec = "size[6,4.3]"..
 		"list[context;cache;0,1;4,3;]"..
-		"item_image[4.8,0;1,1;technic:superquarry]"..
+		"item_image[4.8,0;1,1;nalc:superquarry]"..
 		"label[0,0.2;"..S("%s superquarry"):format("HV").."]"..
 		"field[4.3,3.5;2,1;size;"..S("Radius:")..";"..radius.."]"
 	if meta:get_int("enabled") == 0 then
@@ -61,7 +61,7 @@ end
 
 local function superquarry_receive_fields(pos, formname, fields, sender)
 	local meta = minetest.get_meta(pos)
-	if fields.size and string.find(fields.size, "^[0-17]+$") then
+	if fields.size and string.find(fields.size, "^[0-9]+$") then
 		local size = tonumber(fields.size)
 		if size >= 2 and size <= 16 and size ~= meta:get_int("size") then
 			meta:set_int("size", size)
@@ -106,7 +106,7 @@ local function superquarry_run(pos, node)
 	inv:set_size("cache", 12)
 	-- toss a coin whether we do an automatic purge. Chance 1:100
 	local purge_rand = math.random()
-	if purge_rand <= 0.01 then
+	if purge_rand <= 0.005 then
 		meta:set_int("purge_on", 1)
 	end
 
@@ -208,16 +208,20 @@ local function send_move_error(player)
 	return 0
 end
 
-minetest.register_node("technic:superquarry", {
+minetest.register_node("nalc:superquarry", {
 	description = S("%s superquarry"):format("HV"),
 	tiles = {
-		"default_obsidian_block.png"..tube_entry,
-		"default_obsidian_block.png"..cable_entry,
-		"default_obsidian_block.png"..cable_entry,
-		"default_obsidian_block.png"..cable_entry,
-		"default_obsidian_block.png^default_tool_mesepick.png",
-		"default_obsidian_block.png"..cable_entry
+		"default_mithril_block.png",
+		"default_mithril_block.png",
+		"default_mithril_block.png",
+		"default_mithril_block.png",
+		"default_mithril_block.png^default_tool_mesepick.png",
+		"default_mithril_block.png"
 	},
+	inventory_image = minetest.inventorycube(
+	   "default_mithril_block.png",
+	   "default_mithril_block.png^default_tool_mesepick.png",
+	   "default_mithril_block.png"),
 	paramtype2 = "facedir",
 	groups = {cracky=2, tubedevice=1, technic_machine=1, technic_hv=1},
 	connect_sides = {"bottom", "front", "left", "right"},
@@ -237,7 +241,7 @@ minetest.register_node("technic:superquarry", {
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("infotext", S("%s superquarry"):format("HV"))
-		meta:set_int("size", 4)
+		meta:set_int("size", 8)
 		set_superquarry_formspec(meta)
 		set_superquarry_demand(meta)
 	end,
@@ -265,5 +269,5 @@ minetest.register_node("technic:superquarry", {
 	end
 })
 
-technic.register_machine("HV", "technic:superquarry", technic.receiver)
+technic.register_machine("HV", "nalc:superquarry", technic.receiver)
 
