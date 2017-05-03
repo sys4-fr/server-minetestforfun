@@ -6,22 +6,37 @@
 -- See https://github.com/Ombridride/minetest-minetestforfun-server/issues/114
 --
 
+local tmp = {}
+
 pclasses.api.register_class("hunter", {
 	on_assigned = function(pname, inform)
 		if inform then
 			minetest.chat_send_player(pname, "You are now a hunter")
 			minetest.sound_play("pclasses_full_hunter", {to_player=pname, gain=1})
 		end
-		local reinforced = pclasses.api.util.does_wear_full_armor(pname, "reinforcedleather", true)
-		if reinforced then
-			sprint.increase_maxstamina(pname, 40)
-		else
-			sprint.increase_maxstamina(pname, 30)
-		end
+		sprint.increase_maxstamina(pname, 20)
 		minetest.log("action", "[PClasses] Player " .. pname .. " become a hunter")
 	end,
 	on_unassigned = function(pname)
-		sprint.set_default_maxstamina(pname)
+		sprint.decrease_maxstamina(pname, 20)
+		if tmp[pname] then
+			sprint.decrease_maxstamina(pname, 10)
+			tmp[pname] = nil
+		end
+	end,
+	on_update = function(pname)
+		local reinforced = pclasses.api.util.does_wear_full_armor(pname, "reinforcedleather", true)
+		if reinforced then
+			if not tmp[pname] then
+				tmp[pname] = true
+				sprint.increase_maxstamina(pname, 10) -- 10 more
+			end
+		else
+			if tmp[pname] then
+				tmp[pname] = false
+				sprint.decrease_maxstamina(pname, 10)
+			end
+		end
 	end,
 	switch_params = {
 		color = {r = 30, g = 170, b = 00},
@@ -43,6 +58,9 @@ pclasses.api.register_class("hunter", {
 		"you need to fight a super strong mob, but it's just details...)") .. "image[2.4,5.6;6,4;pclasses_showcase_hunter.png]"
 })
 
+minetest.register_on_leaveplayer(function(player)
+	tmp[player:get_player_name()] = false
+end)
 
 pclasses.api.reserve_item("hunter", "throwing:bow_minotaur_horn")
 pclasses.api.reserve_item("hunter", "throwing:bow_minotaur_horn_loaded")
