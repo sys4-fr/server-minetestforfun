@@ -84,3 +84,10 @@
 	path = mods/moreflowers
 	url = https://github.com/sys4-fr/moreflowers.git
 	branch = master
+[submodule "mods/claycrafter"]
+	path = mods/claycrafter
+	url = https://github.com/Dragonop/claycrafter.git
+[submodule "mods/camera"]
+	path = mods/camera
+	url = https://github.com/sys4-fr/camera.git
+	branch = dev

@@ -15,6 +15,8 @@ pclasses.api.register_class("adventurer", {
 	end,
 	on_unassigned = function(pname)
 	end,
+	on_update = function(pname)
+	end,
 	informations = pclasses.api.textify("Adventurer, the casual players, or hardcore players. Whatever end of the spectrum\n" ..
 		"you're in, adventurer will bring you what you want : no advantages, no help. Maybe you\n" ..
 		"don't want that if you just began playing. If that's the case.. just pick another tab and\n" ..

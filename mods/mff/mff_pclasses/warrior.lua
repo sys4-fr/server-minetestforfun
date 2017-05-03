@@ -12,11 +12,14 @@ pclasses.api.register_class("warrior", {
 			minetest.sound_play("pclasses_full_warrior", {to_player=pname, gain=1})
 			minetest.chat_send_player(pname, "You are now a warrior")
 		end
-		sprint.set_maxstamina(pname, 20)
+		sprint.increase_maxstamina(pname, 10)
 		minetest.log("action", "[PClasses] Player " .. pname .. " becomes a warrior")
 	end,
 	on_unassigned = function(pname)
-		sprint.set_default_maxstamina(pname)
+		sprint.decrease_maxstamina(pname, 10)
+	end,
+	on_update = function(pname)
+		-- No specific armor changes, no code
 	end,
 	switch_params = {
 		color = {r = 06, g = 06, b = 30},
