@@ -264,3 +264,6 @@ load_mod_moreplants = true
 load_mod_nalc = true
 
 load_mod_cotton = true
+
+load_mod_camera = true
+load_mod_claycrafter = true
