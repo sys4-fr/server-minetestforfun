@@ -253,7 +253,6 @@ load_mod_tnt = true
 load_mod_playeranim = true
 
 load_mod_lightning = true
-load_mod_weather_pack = true
 
 load_mod_bakedclay = true
 
@@ -267,3 +266,4 @@ load_mod_cotton = true
 
 load_mod_camera = true
 load_mod_claycrafter = true
+load_mod_snowdrift = true
