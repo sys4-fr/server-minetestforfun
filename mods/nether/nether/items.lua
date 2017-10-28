@@ -386,7 +386,9 @@ minetest.register_node("nether:apple", {
 			p_hunger = 30
 		end
 		hbhunger.hunger[user:get_player_name()] = p_hunger
-		hbhunger.set_hunger(user)
+		local save_hunger = hbhunger.save_hunger
+		if not save_hunger then save_hunger = hbhunger.set_hunger end
+		save_hunger(user)
 
 		local amount = math.random(4, 6)
 		inv:add_item("main", {name="nether:blood_extracted", count=math.floor(amount/3)})

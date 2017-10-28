@@ -126,7 +126,6 @@ load_mod_pipeworks = true
 load_mod_factions = true
 load_mod_invtweak = true
 
-load_mod_screwdriver = true
 load_mod_carts = true
 load_mod_sponge = true
 
@@ -140,7 +139,6 @@ load_mod_more_chests = true
 load_mod_connected_chests = true
 load_mod_chesttools = true
 
-load_mod_farming = true
 load_mod_food = true
 load_mod_food_basic = true
 load_mod_fishing = true
@@ -217,7 +215,6 @@ load_mod_building_blocks = true
 load_mod_inbox = true
 load_mod_money = true
 load_mod_minercantile = true
-load_mod_beds = true
 load_mod_builtin_item = true
 load_mod_email = true
 load_mod_report = true
@@ -249,7 +246,6 @@ load_mod_playereffects = true
 load_mod_meshnode = false
 load_mod_experience = false
 load_mod_bonemeal = true
-load_mod_tnt = true
 load_mod_playeranim = true
 
 load_mod_lightning = true
@@ -267,3 +263,4 @@ load_mod_cotton = true
 load_mod_camera = true
 load_mod_claycrafter = true
 load_mod_snowdrift = true
+player_backend = files
