@@ -91,3 +91,14 @@
 	path = mods/camera
 	url = https://github.com/sys4-fr/camera.git
 	branch = dev
+[submodule "mods/mobs"]
+	path = mods/mobs
+	url = https://github.com/sys4-fr/mobs_redo.git
+	branch = nalc
+[submodule "mods/mob_horse"]
+	path = mods/mob_horse
+	url = https://github.com/tenplus1/mob_horse.git
+[submodule "mods/kpgmobs"]
+	path = mods/kpgmobs
+	url = https://github.com/sys4-fr/mod-kpgmobs.git
+	branch = nalc
