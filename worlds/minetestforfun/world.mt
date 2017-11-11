@@ -155,6 +155,9 @@ load_mod_chesttools = true
 
 load_mod_food = true
 load_mod_food_basic = true
+load_mod_food_sweet = true
+load_mod_mtfoods = true
+load_mod_diet = true
 load_mod_fishing = true
 
 load_mod_hbarmor = true
