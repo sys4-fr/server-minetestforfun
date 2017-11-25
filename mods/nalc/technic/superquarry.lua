@@ -6,7 +6,7 @@ local cable_entry = "^technic_cable_connection_overlay.png"
 
 minetest.register_craft({
 	recipe = {
-		{"default:mithrilblock",       "pipeworks:filter",       "default:mithrilblock"},
+		{"moreores:mithril_block",       "pipeworks:filter",       "moreores:mithril_block"},
 		{"technic:motor",              "technic:quarry", "technic:diamond_drill_head"},
 		{"technic:quarry", "technic:hv_cable",       "technic:quarry"}},
 	output = "nalc:superquarry",

@@ -2,3 +2,4 @@ interact
 moretrees?
 nether?
 bushes?
+cherry_tree?

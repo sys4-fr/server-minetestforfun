@@ -126,7 +126,6 @@ load_mod_pipeworks = true
 load_mod_factions = true
 load_mod_invtweak = true
 
-load_mod_carts = true
 load_mod_sponge = true
 
 load_mod_mobs = true
@@ -175,7 +174,6 @@ load_mod_cozy = true
 load_mod_unified_inventory = true
 load_mod_inventory_icon = true
 load_mod_u_skins = true
-load_mod_bones = true
 load_mod_item_drop = true
 
 load_mod_mff_core = true
@@ -219,6 +217,8 @@ load_mod_shutdown = true
 load_mod_irc = false
 load_mod_irc_commands = false
 load_mod_time_regulation = true
+load_mod_h2omes = true
+load_mod_player_physics = true
 
 load_mod_soundset = true
 load_mod_ambience = true
@@ -269,6 +269,9 @@ load_mod_lightning = true
 
 load_mod_bakedclay = true
 
+load_mod_farming = true
+load_mod_moreores = true
+
 load_mod_moreflowers = true
 load_mod_morefarming = true
 
@@ -280,4 +283,7 @@ load_mod_cotton = true
 load_mod_camera = true
 load_mod_claycrafter = true
 load_mod_snowdrift = true
+load_mod_nyancat = true
+load_mod_cherry_tree = true
+
 player_backend = files
