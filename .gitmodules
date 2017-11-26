@@ -67,9 +67,6 @@
 [submodule "mods/lightning"]
 	path = mods/lightning
 	url = https://github.com/minetest-mods/lightning.git
-[submodule "mods/weather_pack"]
-	path = mods/weather_pack
-	url = https://github.com/xeranas/weather_pack.git
 [submodule "mods/moreplants"]
 	path = mods/moreplants
 	url = https://github.com/sys4-fr/moreplants.git
@@ -139,3 +136,7 @@
 [submodule "mods/cherry_tree"]
 	path = mods/cherry_tree
 	url = https://github.com/sys4-fr/cherry_tree.git
+[submodule "mods/weather_pack"]
+	path = mods/weather_pack
+	url = https://github.com/sys4-fr/weather_pack.git
+	branch = nalc

@@ -280,7 +280,7 @@ load_mod_cotton = true
 
 load_mod_camera = true
 load_mod_claycrafter = true
-load_mod_snowdrift = true
+load_mod_weather_pack = true
 load_mod_nyancat = true
 load_mod_cherry_tree = true
 
