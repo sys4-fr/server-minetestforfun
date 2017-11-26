@@ -27,3 +27,20 @@ for _,mod in ipairs(mods) do
 	end
 end
 
+
+-- Hide quests HUD by default
+if minetest.get_modpath("quests") and quests then
+	minetest.register_on_joinplayer(
+		function(player)
+			if not player then return end
+
+			local playern = player:get_player_name()
+			minetest.after(
+				2,
+				function(playername)
+					quests.hud[playername].autohide = false
+					quests.hide_hud(playername)
+					minetest.log("action", "Quest HUD hidden for player "..playername)
+				end, player:get_player_name())
+		end)
+end
