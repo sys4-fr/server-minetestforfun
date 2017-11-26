@@ -52,9 +52,6 @@
 [submodule "mods/bonemeal"]
 	path = mods/bonemeal
 	url = https://github.com/tenplus1/bonemeal.git
-[submodule "mods/meshnode"]
-	path = mods/meshnode
-	url = https://github.com/stujones11/meshnode.git
 [submodule "mods/playeranim"]
 	path = mods/playeranim
 	url = https://github.com/minetest-mods/playeranim.git

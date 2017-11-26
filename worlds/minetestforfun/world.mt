@@ -260,8 +260,6 @@ load_mod_enchanting = true
 
 load_mod_witchcraft = true
 load_mod_playereffects = true
-load_mod_meshnode = false
-load_mod_experience = false
 load_mod_bonemeal = true
 load_mod_playeranim = true
 
