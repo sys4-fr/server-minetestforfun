@@ -18,7 +18,7 @@ dofile(modpath.."/tools.lua")
 local mods = {"witchcraft", "cotton", "technic",
 				  "beds", "boats", "bucket",
 				  "nyancat", "moreores", "moreblocks",
-				  "maptools"
+				  "maptools", "doors"
 }
 
 for _,mod in ipairs(mods) do

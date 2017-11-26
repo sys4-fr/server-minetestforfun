@@ -16,3 +16,7 @@ moreblocks?
 carts?
 toolranks?
 mff_quests?
+doors?
+darkage?
+dye?
+cherry_tree?
