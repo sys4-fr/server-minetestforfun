@@ -142,7 +142,7 @@ if minetest.get_modpath("toolranks") then
 	 after_use = toolranks.new_afteruse
       })
       minetest.override_item(
-      "nalc:shovel_nya",
+      "nalc:shovel_nyan",
       {
 	 original_description = "Nyan Shovel",
 	 description = toolranks.create_description("Nyan Shovel", 0, 1),
