@@ -124,3 +124,28 @@ minetest.register_alias("default:pick_nyan", "nalc:pick_nyan")
 minetest.register_alias("default:axe_nyan", "nalc:axe_nyan")
 minetest.register_alias("default:shovel_nyan", "nalc:shovel_nyan")
 minetest.register_alias("default:sword_nyan", "nalc:sword_nyan")
+
+-- Toolranks
+if minetest.get_modpath("toolranks") then
+   minetest.override_item(
+      "nalc:pick_nyan",
+      {
+	 original_description = "Nyan Pickaxe",
+	 description = toolranks.create_description("Nyan Pickaxe", 0, 1),
+	 after_use = toolranks.new_afteruse
+      })
+      minetest.override_item(
+      "nalc:axe_nyan",
+      {
+	 original_description = "Nyan Axe",
+	 description = toolranks.create_description("Nyan Axe", 0, 1),
+	 after_use = toolranks.new_afteruse
+      })
+      minetest.override_item(
+      "nalc:shovel_nya",
+      {
+	 original_description = "Nyan Shovel",
+	 description = toolranks.create_description("Nyan Shovel", 0, 1),
+	 after_use = toolranks.new_afteruse
+      })
+end

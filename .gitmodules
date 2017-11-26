@@ -140,3 +140,6 @@
 	path = mods/weather_pack
 	url = https://github.com/sys4-fr/weather_pack.git
 	branch = nalc
+[submodule "mods/toolranks"]
+	path = mods/toolranks
+	url = https://github.com/lisacvuk/minetest-toolranks.git
