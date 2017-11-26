@@ -34,7 +34,6 @@ if minetest.get_modpath("quests") and quests then
 		function(player)
 			if not player then return end
 
-			local playern = player:get_player_name()
 			minetest.after(
 				2,
 				function(playername)
