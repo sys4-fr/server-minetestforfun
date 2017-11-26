@@ -6,3 +6,6 @@
 *.patch
 *.swp
 *.diff
+#*
+*.old
+.dir-locals.el

@@ -262,7 +262,7 @@ minetest.register_node(
 		post_effect_color = {a = 250, r = 0, g = 0, b = 0},
 		groups = {liquid = 3, not_in_creative_inventory = 1},
 	})
-minetest.register_alias("default:acid_flowing", "nalc:acid_flowing")
+minetest.register_alias("default:sand_flowing", "nalc:sand_flowing")
 
 --
 -- Tools / "Advanced" crafting / Non-"natural"
