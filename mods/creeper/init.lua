@@ -5,7 +5,7 @@ mobs:register_mob("creeper:creeper", {
 	type = "monster",
 	passive = false,
 	attack_type = "explode",
-	explosion_radius = 2,
+	explosion_radius = 3,
 	damage = 21,
 	hp_min = 30,
 	hp_max = 40,

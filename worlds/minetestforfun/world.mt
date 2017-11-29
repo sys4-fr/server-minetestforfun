@@ -284,5 +284,6 @@ load_mod_weather_pack = true
 load_mod_nyancat = true
 load_mod_cherry_tree = true
 load_mod_toolranks = true
+load_mod_tnt = true
 
 player_backend = files
