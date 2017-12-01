@@ -4,6 +4,12 @@ minetest.override_item(
 		stack_max = 1000
 	})
 
+minetest.override_item(
+	"default:clay_lump",
+	{
+		stack_max = 200
+	})
+
 minetest.register_craftitem(
 	"nalc:scorched_stuff",
 	{
