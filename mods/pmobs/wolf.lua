@@ -64,7 +64,7 @@ mobs:register_mob(
 		step = 0.5,
 		blood_texture = "mobs_blood.png",
 	})
-mobs:register_spawn("pmobs:wolf", {"default:dirt_with_grass","default:dirt","default:snow", "default:snowblock"}, 20, -1, 22000, 1, 31000)
+mobs:register_spawn("pmobs:wolf", {"default:dirt_with_grass","default:dirt","default:snow", "default:snowblock"}, 20, -1, 22000, 1, 51000)
 mobs:register_egg("pmobs:wolf", "Wolf", "wool_grey.png", 1)
 
 mobs:alias_mob("mobs:wolf", "pmobs:wolf")

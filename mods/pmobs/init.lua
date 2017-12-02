@@ -6,7 +6,7 @@ dofile(minetest.get_modpath("pmobs").."/dog.lua")
 
 -- Monsters
 
-dofile(minetest.get_modpath("pmobs").."/ninja.lua") -- CProgrammingRU
+--dofile(minetest.get_modpath("pmobs").."/ninja.lua") -- CProgrammingRU
 dofile(minetest.get_modpath("pmobs").."/yeti.lua") -- TenPlus1
 
 -- NPC
