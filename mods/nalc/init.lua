@@ -18,7 +18,7 @@ dofile(modpath.."/tools.lua")
 local mods = {"witchcraft", "cotton", "technic",
 				  "beds", "boats", "bucket",
 				  "nyancat", "moreores", "moreblocks",
-				  "maptools", "doors"
+				  "maptools", "doors", "flowers"
 }
 
 for _,mod in ipairs(mods) do
@@ -35,7 +35,7 @@ if minetest.get_modpath("quests") and quests then
 			if not player then return end
 
 			minetest.after(
-				2,
+				3,
 				function(playername)
 					quests.hud[playername].autohide = false
 					quests.hide_hud(playername)

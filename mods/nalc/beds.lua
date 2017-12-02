@@ -50,6 +50,9 @@ for _, colour in pairs({"white", "black", "blue", "green"}) do
 				{"group:wood", "group:wood", "group:wood"},
 			},
 		})
+	-- Alias for retro compatibility
+	minetest.register_alias("beds:fancy_bed_"..colour.."_bottom", "nalc:fancy_bed_"..colour.."_bottom")
+	minetest.register_alias("beds:fancy_bed_"..colour.."_top", "nalc:fancy_bed_"..colour.."_top")
 	
 	-- simple shaped bed
 	beds.register_bed(
@@ -87,7 +90,10 @@ for _, colour in pairs({"white", "black", "blue", "green"}) do
 			},
 			
 		})
-
+	-- Alias for retro compatibility
+	minetest.register_alias("beds:bed_"..colour.."_bottom", "nalc:bed_"..colour.."_bottom")
+	minetest.register_alias("beds:bed_"..colour.."_top", "nalc:bed_"..colour.."_top")
+	
 	-- Fuel
 	
 	minetest.register_craft(

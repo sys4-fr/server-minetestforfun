@@ -529,6 +529,8 @@ if minetest.get_modpath("doors") then
 							 }
 											})
 	minetest.register_alias("doors:door3_wood", "nalc:door3_wood")
+	minetest.register_alias("doors:door3_wood_a", "nalc:door3_wood_a")
+	minetest.register_alias("doors:door3_wood_b", "nalc:door3_wood_b")
 
 	doors.register3("door3_steel", {
 							 tiles = {{ name = "doors_door3_steel.png", backface_culling = true }},
@@ -546,6 +548,8 @@ if minetest.get_modpath("doors") then
 							 }
 											 })
 	minetest.register_alias("doors:door3_steel", "nalc:door3_steel")
+	minetest.register_alias("doors:door3_steel_a", "nalc:door3_steel_a")
+	minetest.register_alias("doors:door3_steel_b", "nalc:door3_steel_b")
 
 	doors.register3("door3_glass", {
 							 tiles = { "doors_door3_glass.png"},
@@ -562,6 +566,8 @@ if minetest.get_modpath("doors") then
 							 }
 											 })
 	minetest.register_alias("doors:door3_glass", "nalc:door3_glass")
+	minetest.register_alias("doors:door3_glass_a", "nalc:door3_glass_a")
+	minetest.register_alias("doors:door3_glass_b", "nalc:door3_glass_b")
 	
 	doors.register3("door3_obsidian_glass", {
 							 tiles = { "doors_door3_obsidian_glass.png" },
@@ -578,6 +584,8 @@ if minetest.get_modpath("doors") then
 							 },
 														 })
 	minetest.register_alias("doors:door3_obsidian_glass", "nalc:door3_obsidian_glass")
+	minetest.register_alias("doors:door3_obsidian_glass_a", "nalc:door3_obsidian_glass_a")
+	minetest.register_alias("doors:door3_obsidian_glass_b", "nalc:door3_obsidian_glass_b")
 
 	if minetest.get_modpath("cherry_tree") then
 		-- From BFD: Cherry planks doors
@@ -594,6 +602,8 @@ if minetest.get_modpath("doors") then
 								 },
 												  })
 		minetest.register_alias("doors:door3_cherry", "nalc:door3_cherry")
+		minetest.register_alias("doors:door3_cherry_a", "nalc:door3_cherry_a")
+		minetest.register_alias("doors:door3_cherry_b", "nalc:door3_cherry_b")
 
 		---fuels---
 		minetest.register_craft({
@@ -621,6 +631,8 @@ if minetest.get_modpath("doors") then
 								 }
 												  })
 		minetest.register_alias("doors:door3_prison", "nalc:door3_prison")
+		minetest.register_alias("doors:door3_prison_a", "nalc:door3_prison_a")
+		minetest.register_alias("doors:door3_prison_b", "nalc:door3_prison_b")
 	end
 
 	---fuels---

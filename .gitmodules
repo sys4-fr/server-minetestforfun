@@ -143,3 +143,6 @@
 [submodule "mods/toolranks"]
 	path = mods/toolranks
 	url = https://github.com/lisacvuk/minetest-toolranks.git
+[submodule "mods/darkage"]
+	path = mods/darkage
+	url = https://github.com/adrido/darkage.git
