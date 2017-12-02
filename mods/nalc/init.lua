@@ -15,11 +15,14 @@ dofile(modpath.."/nodes.lua")
 -- Custom tools
 dofile(modpath.."/tools.lua")
 
-local mods = {"witchcraft", "cotton", "technic",
-				  "beds", "boats", "bucket",
-				  "nyancat", "moreores", "moreblocks",
-				  "maptools", "doors", "flowers"
-}
+local mods =
+	{
+		"witchcraft", "cotton", "technic",
+		"beds", "boats", "bucket",
+		"nyancat", "moreores", "moreblocks",
+		"maptools", "doors", "flowers",
+		"carts"
+	}
 
 for _,mod in ipairs(mods) do
 	if minetest.get_modpath(mod) then

@@ -11,3 +11,6 @@ minetest.register_craft(
 			{"default:steel_ingot", "group:wood", "default:steel_ingot"}
 		}
 	})
+
+-- Aliases
+minetest.register_alias("carts:rail_copper", "moreores:copper_rail")
