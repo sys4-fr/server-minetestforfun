@@ -21,7 +21,7 @@ local mods =
 		"beds", "boats", "bucket",
 		"nyancat", "moreores", "moreblocks",
 		"maptools", "doors", "flowers",
-		"carts"
+		"carts", "nether"
 	}
 
 for _,mod in ipairs(mods) do

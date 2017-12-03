@@ -79,25 +79,25 @@ minetest.register_tool(
 -- Toolranks
 if minetest.get_modpath("toolranks") then
 
-   minetest.override_item(
-      "nalc:pick_gold",
-      {
-	 original_description = "Golden Pickaxe",
-	 description = toolranks.create_description("Golden Pickaxe", 0, 1),
-	 after_use = toolranks.new_afteruse
-      })
-      minetest.override_item(
-      "nalc:axe_gold",
-      {
-	 original_description = "Golden Axe",
-	 description = toolranks.create_description("Golden Axe", 0, 1),
-	 after_use = toolranks.new_afteruse
-      })
-      minetest.override_item(
-      "nalc:shovel_gold",
-      {
-	 original_description = "Golden Shovel",
-	 description = toolranks.create_description("Golden Shovel", 0, 1),
-	 after_use = toolranks.new_afteruse
-      })
+	minetest.override_item(
+		"nalc:pick_gold",
+		{
+			original_description = "Golden Pickaxe",
+			description = toolranks.create_description("Golden Pickaxe", 0, 1),
+			after_use = toolranks.new_afteruse
+		})
+	minetest.override_item(
+		"nalc:axe_gold",
+		{
+			original_description = "Golden Axe",
+			description = toolranks.create_description("Golden Axe", 0, 1),
+			after_use = toolranks.new_afteruse
+		})
+	minetest.override_item(
+		"nalc:shovel_gold",
+		{
+			original_description = "Golden Shovel",
+			description = toolranks.create_description("Golden Shovel", 0, 1),
+			after_use = toolranks.new_afteruse
+		})
 end

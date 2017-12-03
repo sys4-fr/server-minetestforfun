@@ -20,3 +20,4 @@ doors?
 darkage?
 dye?
 cherry_tree?
+nether?
