@@ -43,14 +43,17 @@ minetest.register_craft({
 })
 
 -- Cherry trees
-minetest.register_craft({
-      output = "default:cherry_sapling",
-      recipe = {
-	 {"default:cherry_blossom_leaves", "default:cherry_blossom_leaves", "default:cherry_blossom_leaves"},
-	 {"default:cherry_blossom_leaves", "default:cherry_blossom_leaves", "default:cherry_blossom_leaves"},
-	 {"", "default:stick", ""},
-      }
-})
+if minetest.get_modpath("cherry_tree") then
+	minetest.register_craft(
+		{
+			output = "cherry_tree:cherry_sapling",
+			recipe = {
+				{"cherry_tree:cherry_blossom_leaves", "cherry_tree:cherry_blossom_leaves", "cherry_tree:cherry_blossom_leaves"},
+				{"cherry_tree:cherry_blossom_leaves", "cherry_tree:cherry_blossom_leaves", "cherry_tree:cherry_blossom_leaves"},
+				{"", "default:stick", ""},
+			}
+		})
+end
 
 -- With nether
 if minetest.get_modpath("nether") then

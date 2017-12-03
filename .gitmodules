@@ -16,9 +16,6 @@
 [submodule "mods/minercantile"]
 	path = mods/minercantile
 	url = https://github.com/MinetestForFun/minercantile.git
-[submodule "minetestforfun_game/mods/stacktraceplus"]
-	path = mods/stacktraceplus
-	url = https://github.com/MinetestForFun/stacktraceplus.git
 [submodule "mods/profilerdumper"]
 	path = mods/profilerdumper
 	url = https://github.com/MinetestForFun/profilerdumper.git
@@ -55,9 +52,6 @@
 [submodule "mods/bonemeal"]
 	path = mods/bonemeal
 	url = https://github.com/tenplus1/bonemeal.git
-[submodule "mods/meshnode"]
-	path = mods/meshnode
-	url = https://github.com/stujones11/meshnode.git
 [submodule "mods/playeranim"]
 	path = mods/playeranim
 	url = https://github.com/minetest-mods/playeranim.git
@@ -73,9 +67,6 @@
 [submodule "mods/lightning"]
 	path = mods/lightning
 	url = https://github.com/minetest-mods/lightning.git
-[submodule "mods/weather_pack"]
-	path = mods/weather_pack
-	url = https://github.com/xeranas/weather_pack.git
 [submodule "mods/moreplants"]
 	path = mods/moreplants
 	url = https://github.com/sys4-fr/moreplants.git
@@ -91,3 +82,67 @@
 	path = mods/camera
 	url = https://github.com/sys4-fr/camera.git
 	branch = dev
+[submodule "mods/mob_horse"]
+	path = mods/mob_horse
+	url = https://github.com/tenplus1/mob_horse.git
+[submodule "mods/kpgmobs"]
+	path = mods/kpgmobs
+	url = https://github.com/sys4-fr/mod-kpgmobs.git
+	branch = nalc
+[submodule "mods/diet"]
+	path = mods/diet
+	url = https://github.com/sys4-fr/diet.git
+[submodule "mods/food"]
+	path = mods/food
+	url = https://github.com/sys4-fr/food.git
+[submodule "mods/food_sweet"]
+	path = mods/food_sweet
+	url = https://github.com/sys4-fr/food_sweet.git
+[submodule "mods/mtfoods"]
+	path = mods/mtfoods
+	url = https://github.com/sys4-fr/mtfoods.git
+[submodule "mods/mobs"]
+	path = mods/mobs
+	url = https://github.com/sys4-fr/mobs_redo.git
+	branch = nalc
+[submodule "mods/moreblocks"]
+	path = mods/moreblocks
+	url = https://github.com/minetest-mods/moreblocks.git
+[submodule "mods/colouredstonebricks"]
+	path = mods/colouredstonebricks
+	url = https://github.com/davisonio/colouredstonebricks.git
+[submodule "mods/pipeworks"]
+	path = mods/pipeworks
+	url = https://github.com/minetest-mods/pipeworks.git
+[submodule "mods/h2omes"]
+	path = mods/h2omes
+	url = https://github.com/MinetestForFun/h2omes.git
+[submodule "mods/player_physics"]
+	path = mods/player_physics
+	url = https://github.com/MinetestForFun/player_physics.git
+[submodule "mods/farming"]
+	path = mods/farming
+	url = https://github.com/sys4-fr/farming.git
+[submodule "mods/moreores"]
+	path = mods/moreores
+	url = https://github.com/minetest-mods/moreores.git
+[submodule "mods/stacktraceplus"]
+	path = mods/stacktraceplus
+	url = https://github.com/MinetestForFun/stacktraceplus.git
+[submodule "minetestforfun_game"]
+	path = minetestforfun_game
+	url = https://github.com/sys4-fr/minetest_game.git
+	branch = nalc
+[submodule "mods/cherry_tree"]
+	path = mods/cherry_tree
+	url = https://github.com/sys4-fr/cherry_tree.git
+[submodule "mods/weather_pack"]
+	path = mods/weather_pack
+	url = https://github.com/sys4-fr/weather_pack.git
+	branch = nalc
+[submodule "mods/toolranks"]
+	path = mods/toolranks
+	url = https://github.com/lisacvuk/minetest-toolranks.git
+[submodule "mods/darkage"]
+	path = mods/darkage
+	url = https://github.com/adrido/darkage.git
