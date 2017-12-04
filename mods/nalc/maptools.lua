@@ -12,7 +12,7 @@ minetest.register_node(
 	  },
 	  sounds = default.node_sound_stone_defaults(),
 	})
-minetest.register_alias("default:stone_with_coin", "nalc:stone_with_coins")
+minetest.register_alias("default:stone_with_coin", "nalc:stone_with_coin")
 
 -- Ores
 minetest.register_ore(
