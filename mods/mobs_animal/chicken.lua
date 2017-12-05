@@ -271,7 +271,7 @@ description = S("Raw Chicken"),
 minetest.register_craftitem(":mobs:chicken_cooked", {
 description = S("Cooked Chicken"),
 	inventory_image = "mobs_chicken_cooked.png",
-	on_use = minetest.item_eat(6),
+	on_use = minetest.item_eat(4), -- Modif MFF
 })
 
 minetest.register_craft({

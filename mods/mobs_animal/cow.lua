@@ -52,10 +52,10 @@ mobs:register_mob("mobs_animal:cow", {
 	replace_rate = 10,
 --	replace_what = {"default:grass_3", "default:grass_4", "default:grass_5", "farming:wheat_8"},
 	replace_what = {
-		{"group:grass", "air", 0},
+		{"group:grass", "mobs:dung", 0},
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
-	replace_with = "mobs:dung",
+--	replace_with = "mobs:dung",
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
 
@@ -173,25 +173,27 @@ minetest.register_craft({
 })
 
 -- Dung (from factory's fertilizer)
-minetest.register_node(":mobs:dung", {
-        tiles = {"default_dirt.png"},
-        inventory_image = "mobs_dung.png",
-        description = "Cow dung",
-        drawtype = "nodebox",
-        paramtype = "light",
-        is_ground_content = true,
-        groups = {snappy = 3, attached_node = 1},
-        node_box = {
-                type = "fixed",
-                fixed = {
-                        {-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875},
-                        {-0.125, -0.4375, -0.125, 0.125, -0.375, 0.125},
-                        {0, -0.375, -0.0625, 0.0625, -0.3125, 0.0625},
-                        {0, -0.3125, -0.0625, 0.0625, -0.25, 0},
-                        {-0.0625, -0.375, -0.0625, 0, -0.3125, 0},
-                }
-        }
-})
+minetest.register_node(
+	":mobs:dung",
+	{
+		tiles = {"default_dirt.png"},
+		inventory_image = "mobs_dung.png",
+		description = "Cow dung",
+		drawtype = "nodebox",
+		paramtype = "light",
+		is_ground_content = true,
+		groups = {snappy = 3, attached_node = 1},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875},
+				{-0.125, -0.4375, -0.125, 0.125, -0.375, 0.125},
+				{0, -0.375, -0.0625, 0.0625, -0.3125, 0.0625},
+				{0, -0.3125, -0.0625, 0.0625, -0.25, 0},
+				{-0.0625, -0.375, -0.0625, 0, -0.3125, 0},
+			}
+		}
+	})
 
 minetest.register_craft({
 	type = "fuel",

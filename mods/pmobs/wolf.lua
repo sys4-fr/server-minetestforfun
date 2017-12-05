@@ -8,7 +8,9 @@ mobs:register_mob(
 		passive = false,
 		pathfinding = false,
 		reach = 2,
+		hp_min = 15,
 		hp_max = 20,
+		armor = 200,
 		passive = false,
 		collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
 		visual = "mesh",
@@ -26,7 +28,6 @@ mobs:register_mob(
 		run_velocity = 3,
 		stepheight = 1.1,
 		damage = 3,
-		armor = 200,
 		attack_type = "dogfight",
 		drops = {
 			{name = "mobs:meat_raw",
@@ -64,7 +65,7 @@ mobs:register_mob(
 		step = 0.5,
 		blood_texture = "mobs_blood.png",
 	})
-mobs:register_spawn("pmobs:wolf", {"default:dirt_with_grass","default:dirt","default:snow", "default:snowblock"}, 20, -1, 22000, 1, 51000)
+mobs:register_spawn("pmobs:wolf", {"default:dirt_with_grass","default:dirt","default:snow", "default:snowblock"}, 20, -1, 100000, 1, 31000)
 mobs:register_egg("pmobs:wolf", "Wolf", "wool_grey.png", 1)
 
 mobs:alias_mob("mobs:wolf", "pmobs:wolf")

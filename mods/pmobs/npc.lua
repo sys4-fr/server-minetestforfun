@@ -98,7 +98,7 @@ mobs:register_mob("pmobs:npc", {
 	end,
 })
 -- spawning disabled for now
-mobs:register_spawn("pmobs:npc", {"default:dirt_with_grass"}, 20, 0, 22000, 1, 51000)
+mobs:register_spawn("pmobs:npc", {"default:dirt_with_grass"}, 20, 0, 500000, 1, 31000)
 
 -- register spawn egg
 mobs:register_egg("pmobs:npc", "Npc", "default_brick.png", 1)

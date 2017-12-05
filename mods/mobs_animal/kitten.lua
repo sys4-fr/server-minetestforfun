@@ -67,7 +67,7 @@ mobs:spawn({
 	name = "mobs_animal:kitten",
 	nodes = {"default:dirt_with_grass", "ethereal:grove_dirt"},
 	min_light = 12,
-	chance = 22000,
+	chance = 122000,
 	min_height = 0,
 	max_height = 31000,
 	day_toggle = true,
