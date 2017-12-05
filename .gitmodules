@@ -49,9 +49,6 @@
 [submodule "mods/enchanting"]
 	path = mods/enchanting
 	url = https://github.com/minetest-mods/enchanting.git
-[submodule "mods/bonemeal"]
-	path = mods/bonemeal
-	url = https://github.com/tenplus1/bonemeal.git
 [submodule "mods/playeranim"]
 	path = mods/playeranim
 	url = https://github.com/minetest-mods/playeranim.git
@@ -82,9 +79,6 @@
 	path = mods/camera
 	url = https://github.com/sys4-fr/camera.git
 	branch = dev
-[submodule "mods/mob_horse"]
-	path = mods/mob_horse
-	url = https://github.com/tenplus1/mob_horse.git
 [submodule "mods/kpgmobs"]
 	path = mods/kpgmobs
 	url = https://github.com/sys4-fr/mod-kpgmobs.git
@@ -146,3 +140,10 @@
 [submodule "mods/darkage"]
 	path = mods/darkage
 	url = https://github.com/adrido/darkage.git
+[submodule "mods/bonemeal"]
+	path = mods/bonemeal
+	url = https://github.com/tenplus1/bonemeal.git
+[submodule "mods/mob_horse"]
+	path = mods/mob_horse
+	url = https://github.com/sys4-fr/mob_horse.git
+	branch = nalc
