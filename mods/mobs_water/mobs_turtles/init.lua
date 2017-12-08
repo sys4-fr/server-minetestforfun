@@ -1,6 +1,22 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
+	local sin = math.sin
+	local cos = math.cos
+
+	-- move mob in facing direction
+	local set_velocity = function(self, v)
+
+		local yaw = (self.object:get_yaw() or 0) + self.rotate
+
+		self.object:setvelocity(
+			{
+				x = sin(yaw) * -v,
+				y = self.object:getvelocity().y,
+				z = cos(yaw) * v
+			})
+	end
+
 	local l_colors = {
 		"#604000:175",	--brown
 		"#604000:100",	--brown2
