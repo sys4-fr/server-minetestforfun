@@ -42,7 +42,7 @@ mobs:register_mob(
 		lava_damage = 5,
 		light_damage = 0,
 		on_rightclick = function(self, clicker)
-			tool = clicker:get_wielded_item()
+			local tool = clicker:get_wielded_item()
 			if tool:get_name() == "mobs:meat_raw" then
 				clicker:get_inventory():remove_item("main", "mobs:meat_raw")
 				minetest.add_entity(self.object:getpos(), "pmobs:dog")

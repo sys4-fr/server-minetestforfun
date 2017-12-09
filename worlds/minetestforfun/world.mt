@@ -220,9 +220,7 @@ load_mod_time_regulation = true
 load_mod_h2omes = true
 load_mod_player_physics = true
 
-load_mod_soundset = true
 load_mod_ambience = true
-load_mod_music = true
 
 load_mod_areas = true
 load_mod_markers = true
