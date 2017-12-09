@@ -52,9 +52,6 @@
 [submodule "mods/playeranim"]
 	path = mods/playeranim
 	url = https://github.com/minetest-mods/playeranim.git
-[submodule "mods/playereffects"]
-	path = mods/playereffects
-	url = git://repo.or.cz/minetest_playereffects.git
 [submodule "mods/morefarming"]
 	path = mods/morefarming
 	url = https://github.com/sys4-fr/morefarming.git
@@ -147,3 +144,6 @@
 	path = mods/mob_horse
 	url = https://github.com/sys4-fr/mob_horse.git
 	branch = nalc
+[submodule "mods/playereffects"]
+	path = mods/playereffects
+	url = https://github.com/sys4-fr/playereffects.git
