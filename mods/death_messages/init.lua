@@ -166,7 +166,8 @@ local function sound_play_all(dead)
 	for _, p in ipairs(minetest.get_connected_players()) do
 		local player_name = p:get_player_name()
 		if player_name and player_name ~= dead then
-			minetest.sound_play("death_messages_people_1",{to_player=player_name, gain=soundset.get_gain(player_name,"other")})
+			--			minetest.sound_play("death_messages_people_1",{to_player=player_name, gain=soundset.get_gain(player_name,"other")})
+			minetest.sound_play("death_messages_people_1",{to_player=player_name, gain=1})
 		end
 	end
 end
@@ -183,7 +184,8 @@ minetest.register_on_punchplayer(function(player, hitter, time,
 			death_message = string.format(messages.monsters_whacking[math.random(1, #messages.monsters_whacking)], player_name, entity_name, player_name, entity_name)
 		end
 		broadcast_death(death_message)
-		minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=soundset.get_gain(player:get_player_name(),"other")})
+		--		minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=soundset.get_gain(player:get_player_name(),"other")})
+				minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=1})
 		sound_play_all(player:get_player_name())
 		whacked[player_name] = true
 	end
@@ -233,7 +235,8 @@ if RANDOM_MESSAGES == true then
 			-- Actually tell something
 			death_message = string.format(death_message, player_name, player_name)
 			broadcast_death(death_message)
-			minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player_name,gain=soundset.get_gain(player_name, "other")})
+			--			minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player_name,gain=soundset.get_gain(player_name, "other")})
+						minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player_name,gain=1})
 			sound_play_all(player_name)
 			whacked[player_name] = true
 		end
@@ -262,7 +265,8 @@ else
 				minetest.chat_send_all(player_name .. " died.")
 			end
 		end
-		minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=soundset.get_gain(player:get_player_name(),"other")})
+		--		minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=soundset.get_gain(player:get_player_name(),"other")})
+				minetest.sound_play(sounds[math.random(1,#sounds)],{to_player=player:get_player_name(),gain=1})
 		sound_play_all(player:get_player_name())
 	end)
 end
