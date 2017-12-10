@@ -147,3 +147,6 @@
 [submodule "mods/playereffects"]
 	path = mods/playereffects
 	url = https://github.com/sys4-fr/playereffects.git
+[submodule "mods/item_drop"]
+	path = mods/item_drop
+	url = https://github.com/tacotexmex/item_drop.git
