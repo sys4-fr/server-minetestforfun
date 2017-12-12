@@ -1,4 +1,4 @@
-gameid = minetestforfun_game
+gameid = minetest_game
 backend = redis
 redis_hash = mff_sys4
 redis_address = localhost

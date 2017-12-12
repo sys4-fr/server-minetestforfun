@@ -120,10 +120,6 @@
 [submodule "mods/stacktraceplus"]
 	path = mods/stacktraceplus
 	url = https://github.com/MinetestForFun/stacktraceplus.git
-[submodule "minetestforfun_game"]
-	path = minetestforfun_game
-	url = https://github.com/sys4-fr/minetest_game.git
-	branch = nalc
 [submodule "mods/cherry_tree"]
 	path = mods/cherry_tree
 	url = https://github.com/sys4-fr/cherry_tree.git
@@ -150,3 +146,7 @@
 [submodule "mods/item_drop"]
 	path = mods/item_drop
 	url = https://github.com/tacotexmex/item_drop.git
+[submodule "minetest_game"]
+	path = minetest_game
+	url = https://github.com/minetest/minetest_game.git
+	branch = backport-0.4

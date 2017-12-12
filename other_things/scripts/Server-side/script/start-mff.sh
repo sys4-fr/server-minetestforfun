@@ -18,7 +18,7 @@ while true
 	/home/vincent/jeux/mff/bin/minetestserver \
 		--world /home/vincent/jeux/mff/worlds/minetestforfun/ \
 		--config /home/vincent/jeux/mff/minetest.conf \
-		--gameid minetestforfun_game \
+		--gameid minetest_game \
 		--port 30002 \
 #		--logfile $DEBUG
 
