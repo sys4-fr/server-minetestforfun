@@ -21,7 +21,7 @@ local mods =
 		"beds", "boats", "bucket",
 		"nyancat", "moreores", "moreblocks",
 		"maptools", "doors", "flowers",
-		"carts", "nether"
+		"carts", "nether", "mobs_animal"
 	}
 
 for _,mod in ipairs(mods) do
@@ -46,3 +46,5 @@ if minetest.get_modpath("quests") and quests then
 				end, player:get_player_name())
 		end)
 end
+
+minetest.log("action", "[MOD] NALC loaded")
