@@ -23,6 +23,7 @@ factions_modpath = minetest.get_modpath("factions")
 dofile (factions_modpath .. "/factions.lua")
 dofile (factions_modpath .. "/chatcommands.lua")
 
+factions.version = factions_version
 factions.load()
 factions_chat.init()
 

@@ -119,7 +119,7 @@ function factions_chat.cmdhandler(playername,parameter)
 
 	--show factions mod version
 	if cmd == "version" then
-		minetest.chat_send_player(playername, "Factions: version " .. factions_version , false)
+		minetest.chat_send_player(playername, "Factions: version " .. factions.version , false)
 		return
 	end
 
