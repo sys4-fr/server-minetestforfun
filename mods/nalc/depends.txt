@@ -22,3 +22,4 @@ dye?
 cherry_tree?
 nether?
 mobs_animal?
+minercantile?

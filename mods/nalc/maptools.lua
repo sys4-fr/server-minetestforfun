@@ -136,43 +136,24 @@ minetest.override_item(
 		}
 	})
 
-minetest.override_item(
-	"default:stone_with_tin",
-	{
-		drop = {
-			items = {
-				{items = {"default:tin_lump"}},
-				{items = {"maptools:copper_coin 3"}}
+if minetest.registered_items["default:stone_with_tin"] then
+	minetest.override_item(
+		"default:stone_with_tin",
+		{
+			drop = {
+				items = {
+					{items = {"default:tin_lump"}},
+					{items = {"maptools:copper_coin 3"}}
+				}
 			}
-		}
-	})
+		})
+end
 minetest.override_item(
 	"nalc:desert_stone_with_tin",
 	{
 		drop = {
 			items = {
 				{items = {"default:tin_lump"}},
-				{items = {"maptools:copper_coin 3"}}
-			}
-		}
-	})
-
-minetest.override_item(
-	"moreores:mineral_silver",
-	{
-		drop = {
-			items = {
-				{items = {"moreores:silver_lump"}},
-				{items = {"maptools:copper_coin 3"}}
-			}
-		}
-	})
-minetest.override_item(
-	"nalc:desert_stone_with_silver",
-	{
-		drop = {
-			items = {
-				{items = {"moreores:silver_lump"}},
 				{items = {"maptools:copper_coin 3"}}
 			}
 		}
@@ -201,17 +182,6 @@ minetest.override_item(
 	})
 
 minetest.override_item(
-	"moreores:mineral_mithril",
-	{
-		drop = {
-			items = {
-				{items = {"moreores:mithril_lump"}},
-				{items = {"maptools:silver_coin 3"}},
-			}
-		}
-	})
-
-minetest.override_item(
 	"default:stone_with_diamond",
 	{
 		drop = {
@@ -221,3 +191,37 @@ minetest.override_item(
 			}
 		}
 	})
+
+if minetest.get_modpath("moreores") then
+	minetest.override_item(
+		"moreores:mineral_silver",
+		{
+			drop = {
+				items = {
+					{items = {"moreores:silver_lump"}},
+					{items = {"maptools:copper_coin 3"}}
+				}
+			}
+		})
+
+	minetest.override_item(
+		"moreores:mineral_mithril",
+		{
+			drop = {
+				items = {
+					{items = {"moreores:mithril_lump"}},
+					{items = {"maptools:silver_coin 3"}},
+				}
+			}
+		})
+	minetest.override_item(
+		"nalc:desert_stone_with_silver",
+		{
+			drop = {
+			items = {
+				{items = {"moreores:silver_lump"}},
+				{items = {"maptools:copper_coin 3"}}
+			}
+			}
+		})
+end
