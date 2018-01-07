@@ -1,10 +1,19 @@
 
 -- Wolf by KrupnoPavel
 
+local drop_coin = nil -- NALC : Drop silver coin by chance if maptools mod loaded
+if minetest.get_modpath("maptools") then
+	drop_coin = {
+		name = "maptools:silver_coin",
+		chance = 4, min = 1, max = 1,
+	}
+end
+
 mobs:register_mob(
 	"pmobs:wolf",
 	{
 		type = "monster",
+		docile_by_day = true,
 		passive = false,
 		pathfinding = false,
 		reach = 2,
@@ -30,21 +39,23 @@ mobs:register_mob(
 		damage = 3,
 		attack_type = "dogfight",
 		drops = {
-			{name = "mobs:meat_raw",
-			 chance = 1,
-			 min = 2,
-			 max = 3,},
-			{name = "maptools:silver_coin",
-			 chance = 4, min = 1, max = 1,},
+			{
+				name = "mobs:meat_raw",
+				chance = 1,
+				min = 2,
+				max = 3,
+			},
+			drop_coin -- NALC
 		},
 		drawtype = "front",
 		water_damage = 0,
 		lava_damage = 5,
 		light_damage = 0,
 		on_rightclick = function(self, clicker)
-			local tool = clicker:get_wielded_item()
-			if tool:get_name() == "mobs:meat_raw" then
-				clicker:get_inventory():remove_item("main", "mobs:meat_raw")
+			local tool = clicker:get_wielded_item():get_name()
+			if tool == "mobs:meat_raw" or
+			(minetest.get_modpath("zombie") and tool == "zombie:rotten_flesh") then
+				clicker:get_inventory():remove_item("main", tool)
 				minetest.add_entity(self.object:getpos(), "pmobs:dog")
 				self.object:remove()
 			end

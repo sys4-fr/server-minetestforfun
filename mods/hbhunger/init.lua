@@ -20,6 +20,11 @@ HUNGER_EXHAUST_PLACE = 1 -- exhaustion increased this value after placed
 HUNGER_EXHAUST_MOVE = 0.3 -- exhaustion increased this value if player movement detected
 HUNGER_EXHAUST_LVL = 160 -- at what exhaustion player satiation gets lowerd
 
+-- NALC : Fix MFF pclasses behaviour
+local pc = false
+if minetest.get_modpath("pclasses") and pclasses then
+	pc = true
+end
 
 --load custom settings
 local set = io.open(minetest.get_modpath("hbhunger").."/hbhunger.conf", "r")
@@ -106,13 +111,14 @@ local function hunger_step()
 		local hp = player:get_hp()
 		local timerquot = 1			-- By default regen 0.5 hearth every 10sec
 
-		if pclasses.api.get_player_class(name) == "warrior" then
-			timerquot = 1.42		-- Black_Mithril armor = 0.5 hearth every 7.0sec
-		elseif pclasses.api.util.does_wear_full_armor(name, "mithril", false) then
-			timerquot = 1.17		-- Mithril armor = 0.5 hearth every 8.5sec
+		if pc then -- NALC : Fix MFF modif
+			if pclasses.api.get_player_class(name) == "warrior" then
+				timerquot = 1.42		-- Black_Mithril armor = 0.5 hearth every 7.0sec
+			elseif pclasses.api.util.does_wear_full_armor(name, "mithril", false) then
+				timerquot = 1.17		-- Mithril armor = 0.5 hearth every 8.5sec
+			end
 		end
-
-
+		
 		if timer > 10/timerquot then
 			-- heal player by 1 hp if not dead and satiation is > 15 (of 30)
 			if h > 15 and hp > 0 and player:get_breath() > 0 then
