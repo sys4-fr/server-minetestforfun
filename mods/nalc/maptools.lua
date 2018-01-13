@@ -62,16 +62,21 @@ minetest.override_item(
 		}
 	})
 
-minetest.override_item(
-	"default:dirt",
-	{
-		drop = {
-			items = {
-				{items = {"default:dirt"}},
-				{items = {"maptools:copper_coin"}, rarity = 32}
+local drop = minetest.registered_items["default:dirt"].drop
+if drop then
+	table.insert(drop.items, 1, {items = {"maptools:copper_coin", "default:dirt"}, rarity = 32})
+else
+	minetest.override_item(
+		"default:dirt",
+		{
+			drop = {
+				items = {
+					{items = {"default:dirt"}},
+					{items = {"maptools:copper_coin"}, rarity = 32}
+				}
 			}
-		}
-	})
+		})
+end
 
 minetest.override_item(
 	"default:stone_with_coal",
