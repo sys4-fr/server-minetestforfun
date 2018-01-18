@@ -22,7 +22,7 @@ local mods =
 		"nyancat", "moreores", "moreblocks",
 		"bonemeal", "maptools", "doors",
 		"flowers", "carts", "nether",
-		"mobs_animal",	"minercantile"
+		"mobs_animal",	"minercantile", "diet"
 	}
 
 for _,mod in ipairs(mods) do

@@ -111,9 +111,6 @@
 [submodule "mods/player_physics"]
 	path = mods/player_physics
 	url = https://github.com/MinetestForFun/player_physics.git
-[submodule "mods/farming"]
-	path = mods/farming
-	url = https://github.com/sys4-fr/farming.git
 [submodule "mods/moreores"]
 	path = mods/moreores
 	url = https://github.com/minetest-mods/moreores.git
@@ -150,3 +147,6 @@
 	path = minetest_game
 	url = https://github.com/minetest/minetest_game.git
 	branch = backport-0.4
+[submodule "mods/farming"]
+	path = mods/farming
+	url = https://github.com/tenplus1/farming.git
