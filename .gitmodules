@@ -150,3 +150,27 @@
 [submodule "mods/farming"]
 	path = mods/farming
 	url = https://github.com/tenplus1/farming.git
+[submodule "mods/unifieddyes"]
+	path = mods/unifieddyes
+	url = https://github.com/minetest-mods/unifieddyes.git
+[submodule "mods/unifiedbricks"]
+	path = mods/unifiedbricks
+	url = https://github.com/minetest-mods/unifiedbricks.git
+[submodule "mods/coloredwood"]
+	path = mods/coloredwood
+	url = https://github.com/minetest-mods/coloredwood.git
+[submodule "mods/bobblocks"]
+	path = mods/bobblocks
+	url = https://github.com/rabbibob/BobBlocks.git
+[submodule "mods/homedecor_modpack"]
+	path = mods/homedecor_modpack
+	url = https://github.com/minetest-mods/homedecor_modpack.git
+[submodule "mods/stained_glass"]
+	path = mods/stained_glass
+	url = https://github.com/VanessaE/stained_glass.git
+[submodule "mods/unifiedwool"]
+	path = mods/unifiedwool
+	url = https://github.com/MT-Modder/unifiedwool.git
+[submodule "mods/sea"]
+	path = mods/sea
+	url = https://github.com/H4mlet/sea.git

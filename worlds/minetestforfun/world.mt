@@ -11,7 +11,6 @@ load_mod_moreblocks = true
 load_mod_unifieddyes = true
 load_mod_coloredwood = true
 load_mod_colouredstonebricks = true
-load_mod_colormachine = true
 
 load_mod_metatools = true
 load_mod_worldedit = true
@@ -274,7 +273,8 @@ load_mod_morefarming = true
 load_mod_moreplants = true
 load_mod_nalc = true
 
-load_mod_cotton = true
+load_mod_unifiedwool = true
+load_mod_unifiedbricks = true
 
 load_mod_camera = true
 load_mod_claycrafter = true
