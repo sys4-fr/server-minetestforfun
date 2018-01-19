@@ -87,6 +87,7 @@ load_mod_multitest = true
 load_mod_lavalamp = true
 load_mod_lantern = true
 load_mod_jumping = true
+load_mod_homedecor_i18n = true
 
 load_mod_mesecons = true
 load_mod_warps = true
