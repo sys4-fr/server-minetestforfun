@@ -13,7 +13,7 @@ minetest.register_craft({
 })
 
 local superquarry_dig_above_nodes = 3 -- How far above the superquarry we will dig nodes
-local superquarry_max_depth       = 2500
+local superquarry_max_depth       = 500
 local superquarry_demand = 20000
 local superquarry_eject_dir = vector.new(0, 1, 0)
 
@@ -63,7 +63,7 @@ local function superquarry_receive_fields(pos, formname, fields, sender)
 	local meta = minetest.get_meta(pos)
 	if fields.size and string.find(fields.size, "^[0-9]+$") then
 		local size = tonumber(fields.size)
-		if size >= 2 and size <= 16 and size ~= meta:get_int("size") then
+		if size >= 2 and size <= 8 and size ~= meta:get_int("size") then
 			meta:set_int("size", size)
 			meta:set_int("dug", 0)
 		end
@@ -159,7 +159,7 @@ local function superquarry_run(pos, node)
 				end
 			end
 
-			if can_dig then
+			--[[if can_dig then
 				for ay = startpos.y, digpos.y+1, -1 do
 					local checkpos = {x=digpos.x, y=ay, z=digpos.z}
 					local checknode = technic.get_or_load_node(checkpos) or minetest.get_node(checkpos)
@@ -168,7 +168,8 @@ local function superquarry_run(pos, node)
 						break
 					end
 				end
-			end
+				end --]]
+
 			nd = nd + 1
 			if can_dig then
 				minetest.remove_node(digpos)
