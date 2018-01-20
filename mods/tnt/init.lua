@@ -323,7 +323,7 @@ local function tnt_explode(pos, radius, ignore_protection, ignore_on_blast, no_f
 	local on_construct_queue = {}
 	basic_flame_on_construct = minetest.registered_nodes["fire:basic_flame"].on_construct
 
-	local c_fire = minetest.get_content_id("fake_fire:fake_fire")
+	local c_fire = minetest.get_content_id("fake_fire:ice_fire")
 	if not no_fire then
 		c_fire = minetest.get_content_id("fire:basic_flame")
 	end
