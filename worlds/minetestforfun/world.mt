@@ -51,6 +51,7 @@ load_mod_clams = true
 load_mod_stairsshine = true
 load_mod_whiteshell = true
 load_mod_3dmushrooms = true
+load_mod_plantlife_i18n= true
 
 load_mod_nether = true
 load_mod_vector_extras = true
