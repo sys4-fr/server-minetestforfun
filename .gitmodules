@@ -153,9 +153,6 @@
 [submodule "mods/unifiedbricks"]
 	path = mods/unifiedbricks
 	url = https://github.com/minetest-mods/unifiedbricks.git
-[submodule "mods/coloredwood"]
-	path = mods/coloredwood
-	url = https://github.com/minetest-mods/coloredwood.git
 [submodule "mods/bobblocks"]
 	path = mods/bobblocks
 	url = https://github.com/rabbibob/BobBlocks.git
@@ -184,3 +181,6 @@
 	path = mods/farming
 	url = https://github.com/sys4-fr/farming.git
 	branch = nalc
+[submodule "mods/coloredwood"]
+	path = mods/coloredwood
+	url = https://github.com/sys4-fr/coloredwood.git
