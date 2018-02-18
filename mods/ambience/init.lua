@@ -101,7 +101,7 @@ local day = {
 	{name="craw", length=3, gain=day_volume},
 	{name="bluejay", length=7, gain=day_volume},
 	{name="ComboWind", length=17,  gain=day_volume},
-	{name="canadianloon2", length=15, gain=day_volume},
+	{name="canadianloon2", length=15, gain=day_volume-0.7},
 	{name="peacock", length=3, gain=day_volume}
 }
 
