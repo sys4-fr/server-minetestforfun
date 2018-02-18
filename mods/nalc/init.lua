@@ -15,6 +15,9 @@ dofile(modpath.."/nodes.lua")
 -- Custom tools
 dofile(modpath.."/tools.lua")
 
+-- Aliases
+dofile(modpath.."/aliases.lua")
+
 local mods =
 	{
 		"witchcraft", "cotton", "technic",
