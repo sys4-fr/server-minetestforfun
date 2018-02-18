@@ -1,13 +1,18 @@
-MinetestForFun Game server version of MinetestForFun Team
+Notre Ami Le Cube Game server by sys4
 ===================
 
-![banner_classic](http://i.imgur.com/5ADfUeK.png)
+![banner_classic](https://i.imgur.com/BVmsQty.png)
 
-You can find here the subgame and the mods of the server MinetestForFun.
+You can find here all the files of the server NALC.
 
-If you want help us, don't hesitate and take a look at our issues.
+If you want help me, don't hesitate and take a look at my issues.
 
 Contributors
+===================
+- sys4
+  > Server hoster, repository owner, server maintenance, ...
+
+Contributors of the original MinetestForFun server that I have forked
 ===================
 - Ombridride - Darcidride - MinetestForFun
   > Server hoster, reposity owner.
@@ -40,14 +45,19 @@ Contributors
 - younishd
   > Cart fixer
 
-minetestforfun_game sous-jeu et mods
+Notre Ami Le Cube serveur de jeux Minetest
 ===================
 
-Vous pouvez trouver ici le sous-jeu et les mods du serveur MinetestForFun.
+Vous pouvez trouver ici tous les fichiers du du serveur NALC.
 
-Si vous voulez nous aider, n'hésitez pas et jetez un coup d'oeil à nos tickets.
+Si vous voulez nous aider, n'hésitez pas et jetez un coup d'oeil à mes tickets.
 
 Contributeurs
+===================
+- sys4
+  > Hébergeur du serveur, possesseur du dépot, mainteneur du serveur, et bien d'autres...
+
+Contributeurs du serveur original MinetestForFun que j'ai forké
 ===================
 - Ombridride - Darcidride - MinetestForFun
   > Hébergeur du serveur, possesseur du dépôt.
