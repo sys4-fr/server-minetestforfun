@@ -168,9 +168,6 @@
 [submodule "mods/sea"]
 	path = mods/sea
 	url = https://github.com/H4mlet/sea.git
-[submodule "mods/plantlife_modpack"]
-	path = mods/plantlife_modpack
-	url = https://github.com/minetest-mods/plantlife_modpack.git
 [submodule "mods/biome_lib"]
 	path = mods/biome_lib
 	url = https://github.com/minetest-mods/biome_lib.git
@@ -184,3 +181,6 @@
 [submodule "mods/coloredwood"]
 	path = mods/coloredwood
 	url = https://github.com/sys4-fr/coloredwood.git
+[submodule "mods/plantlife_modpack"]
+	path = mods/plantlife_modpack
+	url = https://github.com/sys4-fr/plantlife_modpack.git
