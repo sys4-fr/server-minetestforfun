@@ -121,6 +121,9 @@ load_mod_mesecons_microcontroller = true
 load_mod_mesecons_movestones = true
 load_mod_mesecons_noteblock = true
 load_mod_mesecons_stickyblocks = true
+load_mod_mesecons_fpga = true
+load_mod_mesecons_wires = true
+
 load_mod_bobblocks = true
 load_mod_pipeworks = true
 

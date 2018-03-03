@@ -184,3 +184,6 @@
 [submodule "mods/plantlife_modpack"]
 	path = mods/plantlife_modpack
 	url = https://github.com/sys4-fr/plantlife_modpack.git
+[submodule "mods/mesecons"]
+	path = mods/mesecons
+	url = https://github.com/minetest-mods/mesecons.git
