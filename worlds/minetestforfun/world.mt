@@ -124,6 +124,28 @@ load_mod_mesecons_stickyblocks = true
 load_mod_mesecons_fpga = true
 load_mod_mesecons_wires = true
 
+load_mod_moremesecons_adjustable_blinkyplant = true
+load_mod_moremesecons_adjustable_player_detector = true
+load_mod_moremesecons_commandblock = true
+load_mod_moremesecons_conductor_signalchanger = true
+load_mod_moremesecons_dual_delayer = tru
+load_mod_moremesecons_entity_detector = true
+load_mod_moremesecons_igniter = true
+load_mod_moremesecons_induction_transmitter = true
+load_mod_moremesecons_injector_controller = true
+load_mod_moremesecons_jammer = true
+load_mod_moremesecons_luablock = true
+load_mod_moremesecons_luacontroller_tool = true
+load_mod_moremesecons_mesechest = true
+load_mod_moremesecons_playerkiller = true
+load_mod_moremesecons_sayer = true
+load_mod_moremesecons_signalchanger = true
+load_mod_moremesecons_switchtorch = true
+load_mod_moremesecons_teleporter = true
+load_mod_moremesecons_timegate = true
+load_mod_moremesecons_utils = true
+load_mod_moremesecons_wireless = true
+
 load_mod_bobblocks = true
 load_mod_pipeworks = true
 

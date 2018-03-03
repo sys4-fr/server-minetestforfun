@@ -187,3 +187,6 @@
 [submodule "mods/mesecons"]
 	path = mods/mesecons
 	url = https://github.com/minetest-mods/mesecons.git
+[submodule "mods/moremesecons"]
+	path = mods/moremesecons
+	url = https://github.com/minetest-mods/moremesecons.git
