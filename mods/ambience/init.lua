@@ -244,7 +244,7 @@ local music = {
 	{name="EtherealShort", length=3*60+4, gain=music_volume*.7},
 	{name="FarawayShort", length=3*60+5, gain=music_volume*.7},
 	{name="dark_ambiance", length=44, gain=music_volume},
-	{name="Ambivalent", length=2*60+31, gain=music_volume},
+	{name="Ambivalent", length=2*60+31, gain=music_volume*1.4},
 	{name="anonnp4014", length=2*60+31, gain=music_volume*1.6},
 	{name="bensound_deepblue", length=4*60+49, gain=music_volume},
 	{name="bensound_ofeliasdream", length=4*60+59, gain=music_volume},
