@@ -19,6 +19,7 @@ mff_quests?
 doors?
 darkage?
 dye?
+unifieddyes?
 cherry_tree?
 nether?
 mobs_animal?

@@ -30,3 +30,54 @@ minetest.register_ore({
 	noise_params     = uranium_params,
 	noise_threshold = uranium_threshold,
 })
+
+-- Add recipes for extractor
+
+if minetest.get_modpath("dye") then
+	local unifieddyes = minetest.get_modpath("unifieddyes")
+	local dye_recipes =
+		{
+			{"bakedclay:delphinium", "dye:cyan 4"},
+			{"bakedclay:lazarus", "dye:pink 4"},
+			{"bakedclay:mannagrass", "dye:dark_green 4"},
+			{"bakedclay:thistle", "dye:magenta 4"},
+			{"nalc:scorched_stuff", "dye:black 4"},
+			{"moreflowers:wild_carrot", "dye:white 2"},
+			{"moreflowers:teosinte", unifieddyes and "unifieddyes:lime 2"},
+			{"morefarming:wildcarrot", "dye:white 4"},
+			{"morefarming:teosinte", unifieddyes and "unifieddyes:lime 4"}
+		}
+
+	for _, data in ipairs(dye_recipes) do
+		technic.register_extractor_recipe({input = {data[1]}, output = data[2]})
+	end
+
+	-- overwrite the existing crafting recipes
+	minetest.register_craft(
+		{
+			type = "shapeless",
+			output = "dye:cyan 1",
+			recipe = {"bakedclay:delphinium"}
+		})
+
+	minetest.register_craft(
+		{
+			type = "shapeless",
+			output = "dye:pink 1",
+			recipe = {"bakedclay:lazarus"}
+		})
+
+	minetest.register_craft(
+		{
+			type = "shapeless",
+			output = "dye:dark_green 1",
+			recipe = {"bakedclay:mannagrass"}
+		})
+
+	minetest.register_craft(
+		{
+			type = "shapeless",
+			output = "dye:magenta 1",
+			recipe = {"bakedclay:thistle"}
+		})
+end
