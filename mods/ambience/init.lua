@@ -126,7 +126,7 @@ local swimming_frequent = {
 local cave = {
 	handler = {},
 	frequency = cave_frequency,
-	{name="Bats_in_Cave", length=5, gain=cave_volume}
+	{name="Bats_in_Cave", length=5, gain=cave_volume*0.5}
 }
 
 local cave_frequent = {

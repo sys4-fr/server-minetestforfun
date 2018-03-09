@@ -27,3 +27,4 @@ mobs_monster?
 minercantile?
 diet?
 homedecor?
+bakedclay?
