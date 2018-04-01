@@ -317,7 +317,7 @@ for n,data in ipairs(guide_infos) do
 		elseif typ == "text" then
 		   local wrap_func = minetest.wrap_text
 		   if not wrap_func then wrap_func = minetest.splittext end
-			local tab = wrap_func(content, guide_size.fx)
+			local tab = wrap_func(content, guide_size.fx, true)
 			local l = guide_size.cx
 			for _,str in ipairs(tab) do
 				form = form.."label["..guide_size.cx ..","..guide_size.cy+y..";"..str.."]"
