@@ -204,3 +204,6 @@
 [submodule "mods/mana"]
 	path = mods/mana
 	url = git://repo.or.cz/minetest_mana.git
+[submodule "mods/connected_chests"]
+	path = mods/connected_chests
+	url = https://github.com/HybridDog/connected_chests.git

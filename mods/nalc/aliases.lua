@@ -7,3 +7,7 @@ end
 if minetest.get_modpath("moretrees") then
 	minetest.register_alias("moretrees:acacia_sapling_ongen", "default:acacia_sapling")
 end
+
+-- new connected_chests compatibility
+minetest.register_alias("connected_chests:chest_locked_left", "default:chest_locked_connected_left")
+minetest.register_alias("connected_chests:chest_locked_right", "default:chest_locked_connected_right")
