@@ -1,3 +1,4 @@
+sprint
 mff_core
 pclasses
 runes
