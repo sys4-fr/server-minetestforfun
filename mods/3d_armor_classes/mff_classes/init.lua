@@ -189,9 +189,35 @@ if armor.materials.blackmithril then
 		armor_groups = {fleshy=16},
 		damage_groups = {cracky=2, snappy=1, level=3}
 	})	
+
+		-- Register shield :
+		armor:register_armor(":shields:shield_blackmithril", {
+		description = "Black Mithril Shield (warrior)",
+		inventory_image = "shields_inv_shield_black_mithril_warrior.png",
+		groups = {armor_shield=15, armor_heal=0, armor_use=50},
+		armor_groups = {fleshy=16},
+		damage_groups = {cracky=2, snappy=1, level=3},
+		reciprocate_damage = true,
+		on_damage = function(player, index, stack)
+			play_sound_effect(player, "default_glass_footstep")
+		end,
+		on_destroy = function(player, index, stack)
+			play_sound_effect(player, "default_break_glass")
+		end,
+})
 end
 
 for k, v in pairs(armor.materials) do
+	if k == "blackmithril" then
+		minetest.register_craft({
+			output = "shields:shield_"..k,
+			recipe = {
+				{v, v, v},
+				{v, v, v},
+				{"", v, ""},
+			},
+		})
+	end
 	minetest.register_craft({
 		output = "3d_armor:helmet_"..k,
 		recipe = {
