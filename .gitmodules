@@ -55,9 +55,6 @@
 [submodule "mods/morefarming"]
 	path = mods/morefarming
 	url = https://github.com/sys4-fr/morefarming.git
-[submodule "mods/bakedclay"]
-	path = mods/bakedclay
-	url = https://github.com/tenplus1/bakedclay.git
 [submodule "mods/lightning"]
 	path = mods/lightning
 	url = https://github.com/minetest-mods/lightning.git
@@ -126,9 +123,6 @@
 [submodule "mods/darkage"]
 	path = mods/darkage
 	url = https://github.com/adrido/darkage.git
-[submodule "mods/bonemeal"]
-	path = mods/bonemeal
-	url = https://github.com/tenplus1/bonemeal.git
 [submodule "mods/mob_horse"]
 	path = mods/mob_horse
 	url = https://github.com/sys4-fr/mob_horse.git
@@ -139,10 +133,6 @@
 [submodule "mods/item_drop"]
 	path = mods/item_drop
 	url = https://github.com/tacotexmex/item_drop.git
-[submodule "minetest_game"]
-	path = minetest_game
-	url = https://github.com/minetest/minetest_game.git
-	branch = backport-0.4
 [submodule "mods/unifieddyes"]
 	path = mods/unifieddyes
 	url = https://github.com/minetest-mods/unifieddyes.git
@@ -155,25 +145,15 @@
 [submodule "mods/homedecor_modpack"]
 	path = mods/homedecor_modpack
 	url = https://github.com/minetest-mods/homedecor_modpack.git
-[submodule "mods/stained_glass"]
-	path = mods/stained_glass
-	url = https://github.com/VanessaE/stained_glass.git
 [submodule "mods/unifiedwool"]
 	path = mods/unifiedwool
 	url = https://github.com/MT-Modder/unifiedwool.git
-[submodule "mods/sea"]
-	path = mods/sea
-	url = https://github.com/H4mlet/sea.git
 [submodule "mods/biome_lib"]
 	path = mods/biome_lib
 	url = https://github.com/minetest-mods/biome_lib.git
 [submodule "mods/moretrees"]
 	path = mods/moretrees
 	url = https://github.com/minetest-mods/moretrees.git
-[submodule "mods/farming"]
-	path = mods/farming
-	url = https://github.com/sys4-fr/farming.git
-	branch = nalc
 [submodule "mods/coloredwood"]
 	path = mods/coloredwood
 	url = https://github.com/sys4-fr/coloredwood.git
@@ -207,3 +187,25 @@
 [submodule "mods/connected_chests"]
 	path = mods/connected_chests
 	url = https://github.com/HybridDog/connected_chests.git
+[submodule "minetest_game"]
+	path = minetest_game
+	url = https://github.com/minetest/minetest_game
+	branch = stable-0.4
+[submodule "mods/bakedclay"]
+	path = mods/bakedclay
+	url = https://notabug.org/TenPlus1/bakedclay.git
+[submodule "mods/bonemeal"]
+	path = mods/bonemeal
+	url = https://notabug.org/TenPlus1/bonemeal.git
+[submodule "mods/sea"]
+	path = mods/sea
+	url = https://sys4.fr/gogs/NotreAmiLeCube/sea.git
+[submodule "mods/stained_glass"]
+	path = mods/stained_glass
+	url = https://gitlab.com/VanessaE/stained_glass.git
+[submodule "mods/farming"]
+	path = mods/farming
+	url = https://notabug.org/TenPlus1/Farming.git
+[submodule "mods/hazmat_suit"]
+	path = mods/hazmat_suit
+	url = https://github.com/stujones11/hazmat_suit.git
