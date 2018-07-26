@@ -198,12 +198,6 @@ if armor.materials.blackmithril then
 		armor_groups = {fleshy=16},
 		damage_groups = {cracky=2, snappy=1, level=3},
 		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_glass_footstep")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_break_glass")
-		end,
 })
 end
 
