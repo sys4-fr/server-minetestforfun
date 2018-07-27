@@ -89,9 +89,6 @@
 	path = mods/mobs
 	url = https://github.com/sys4-fr/mobs_redo.git
 	branch = nalc
-[submodule "mods/moreblocks"]
-	path = mods/moreblocks
-	url = https://github.com/minetest-mods/moreblocks.git
 [submodule "mods/colouredstonebricks"]
 	path = mods/colouredstonebricks
 	url = https://github.com/davisonio/colouredstonebricks.git
@@ -154,9 +151,6 @@
 [submodule "mods/moretrees"]
 	path = mods/moretrees
 	url = https://github.com/minetest-mods/moretrees.git
-[submodule "mods/coloredwood"]
-	path = mods/coloredwood
-	url = https://github.com/sys4-fr/coloredwood.git
 [submodule "mods/plantlife_modpack"]
 	path = mods/plantlife_modpack
 	url = https://github.com/sys4-fr/plantlife_modpack.git
@@ -209,3 +203,9 @@
 [submodule "mods/mana"]
 	path = mods/mana
 	url = https://sys4.fr/gogs/NotreAmiLeCube/mana.git
+[submodule "mods/moreblocks"]
+	path = mods/moreblocks
+	url = https://sys4.fr/gogs/NotreAmiLeCube/moreblocks.git
+[submodule "mods/coloredwood"]
+	path = mods/coloredwood
+	url = https://sys4.fr/gogs/NotreAmiLeCube/coloredwood.git
