@@ -209,3 +209,6 @@
 [submodule "mods/mesecons"]
 	path = mods/mesecons
 	url = https://sys4.fr/gogs/NotreAmiLeCube/mesecons.git
+[submodule "mods/boost_cart"]
+	path = mods/boost_cart
+	url = https://sys4.fr/gogs/NotreAmiLeCube/boost_cart.git
