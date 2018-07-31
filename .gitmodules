@@ -154,9 +154,6 @@
 [submodule "mods/plantlife_modpack"]
 	path = mods/plantlife_modpack
 	url = https://github.com/sys4-fr/plantlife_modpack.git
-[submodule "mods/mesecons"]
-	path = mods/mesecons
-	url = https://github.com/minetest-mods/mesecons.git
 [submodule "mods/moremesecons"]
 	path = mods/moremesecons
 	url = https://github.com/minetest-mods/moremesecons.git
@@ -209,3 +206,6 @@
 [submodule "mods/coloredwood"]
 	path = mods/coloredwood
 	url = https://sys4.fr/gogs/NotreAmiLeCube/coloredwood.git
+[submodule "mods/mesecons"]
+	path = mods/mesecons
+	url = https://sys4.fr/gogs/NotreAmiLeCube/mesecons.git
